@@ -1,0 +1,223 @@
+(For ZARX Esports Forum – Global Esports IP Website)
+PROJECT TITLE
+Build a High-End, 3D Motion-Driven Website for ZARX Esports Forum (ZEF)
+OBJECTIVE
+Create a premium, gaming-industry level website that positions ZARX Esports Forum as:
+A Global Esports IP Curator
+A Competitive Ecosystem Architect
+A Broadcast-First, Investor-Ready Brand
+Not a service company, but a structured IP authority
+The website must feel:
+AAA Gaming Industry Level
+High-production esports aesthetic
+3D motion + LED-style animations
+Purple / Violet / Baby Pink / Starlight neon palette
+Investor-friendly but gamer-dominant
+Modern WebGL / 3D UI inspired
+🎨 DESIGN & VISUAL DIRECTION
+Color Theme
+Deep black base (#0A0A0F)
+Violet / Purple gradients (#A020F0)
+Neon Pink highlights (#FF00FF)
+Lavender soft glow (#E6E6FA)
+Electric baby pink accents
+Subtle glassmorphism
+Use this glow styling throughout:
+Copy code
+Css
+.glow-box {
+  background: linear-gradient(135deg, #A020F0, #E6E6FA);
+  box-shadow: 0 0 20px #A020F0, 0 0 40px #FF00FF;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.glow-text {
+  color: white;
+  text-shadow: 0 0 10px #A020F0, 0 0 20px #A020F0, 0 0 30px #A020F0;
+}
+🎮 HERO SECTION (HOME PAGE)
+Background Visual Direction
+Create a high-end animated gaming scene including:
+Cyberpunk city skyline
+Racing cars drifting (GTA-style vibe)
+Tactical fighter silhouettes
+Esports arena lighting
+Subtle VR hologram effects
+Slow-moving particles
+Purple neon fog
+Floating 3D geometric shards
+The vibe should resemble high-end esports trailer visuals.
+LED LOGO TICKER (BOTTOM BAND)
+Create a moving LED banner at the bottom of hero section:
+Motion:
+Continuous smooth animation
+Moving from RIGHT → LEFT
+Infinite loop
+Slight LED glow effect
+Blur reflection beneath
+Include logos (monochrome white or violet-tinted):
+Clash of Clans
+Riot Games
+Valorant
+League of Legends
+PUBG Mobile
+Free Fire Max
+Clash Royale
+Pokémon Unite
+Not at the top. It must sit at the bottom like a premium esports broadcast ticker.
+🏆 PRIMARY CTA (Hero)
+Headline (Glow text): “Designing the Future Infrastructure of Global Competitive Gaming”
+Subtext: “We curate, build, and scale competitive esports IPs across titles, audiences, and continents.”
+CTA Buttons:
+Explore Our IPs
+Register Now
+Invest With Us
+🔥 SECTION 2 – CURRENT FOCUS
+NXT in Gaming 2026
+Event:
+February – March 2026
+Bharat Mandapam, New Delhi
+Display as a cinematic event block with:
+Animated countdown timer
+Floating 3D badge
+“Official Media Partner – NewsX”
+“Brand & Sponsorship Partner – BNS Consulting”
+“Technology Partner – ZARX Technologies Pvt Ltd”
+“Managed by – X Arena”
+CTA: “Join the Arena”
+🧠 WHAT WE ARCHITECT
+(Not called Services)
+Title: “Competitive Ecosystem Architecture”
+1️⃣ Esports IP Design & Curation
+League & competitive format design
+Governance & lifecycle planning
+Tournament integrity frameworks
+Long-term season structuring
+Full ownership model
+2️⃣ Media Production & Broadcast Operations
+End-to-end live broadcast execution
+Multi-platform streaming pipelines
+Broadcast overlays & design systems
+Post-event content lifecycle
+Unified production command
+3️⃣ League, Team & Operations Management
+Central command structure
+Team onboarding frameworks
+Referee & admin governance
+Competitive readiness operations
+4️⃣ High-Performance Player Development
+Structured bootcamps
+Skill progression models
+Career-aligned development
+Long-term athlete architecture
+Each section should appear in 3D floating cards with glow effect.
+📅 TIMELINE SECTION (Interactive Horizontal Scroll)
+Title: “Our Journey”
+Timeline Events:
+March 10 – Incorporation of ZARX Esports Forum
+May 2025 – 10 Events | ₹40,000 Prize Pool | Online + Offline
+June 2025 – ZEF Champions League Season 1
+July 2025 – Season 2
+August 2025 – Season 3
+September 2025 – Season 4
+November 2025 – Winter Wars 1
+December 2025 – Winter Wars 2
+Feb–March 2026 – NXT in Gaming
+April–May 2026 – NSL 2026
+Make it neon-line animated with glowing nodes.
+🏟 OUR IPs
+Display 3 Major IPs as 3D rotating cards:
+NXT in Gaming 2026
+NSL 2026 (April–May)
+GSL 2026 (November)
+Each should have “View Details” CTA.
+🎟 NSL 2026 LANDING PAGE
+Create separate section/page:
+Ticket Categories (5 Types)
+General Entry
+VIP Arena Pass
+Pro Experience Pass
+Founder Circle Access
+Corporate Box
+Include:
+Vendor & Stall Registration Form
+Sponsor Inquiry Button
+Team Registration Button
+Ticket purchase integration ready
+Design it like a championship esports finals page.
+👤 ABOUT US SECTION
+Founder Block: Aniket Singh
+Founder & CEO
+Space for Photo
+Short visionary bio.
+Team Section: 5 Team Members layout with:
+Photo placeholder
+Name
+Designation
+Short description
+Company Statement: ZARX Esports Forum is a global competitive gaming IP curator building structured esports ecosystems across titles and territories.
+🤝 PARTNERS SECTION
+Display logos in glowing grid:
+NewsX (Media Partner)
+BNS Consulting (Brand & Sponsorship Partner)
+ZARX Technologies Pvt Ltd (Technology Partner)
+X Arena (Managing Partner)
+📈 INVESTOR SECTION
+Create a premium block:
+Headline: “Building the Next Generation Competitive Gaming Infrastructure”
+Include:
+IP Ownership Model
+Scalable League Architecture
+Broadcast-first monetisation
+Global expansion roadmap
+CTA: “Request Investor Deck”
+📝 CAREERS PAGE
+Join the Competitive Architecture Movement
+Open Roles
+Internship Opportunities
+Esports Operations
+Broadcast & Media
+Strategy & Partnerships
+📷 MEDIA GALLERY
+Grid for:
+Past tournament photos
+Winter Wars
+ZEF Champions League
+Arena visuals
+Add hover glow animation.
+⚙️ TECH STACK RECOMMENDATION
+Use:
+React / Next.js
+Three.js or WebGL
+GSAP for motion
+Framer Motion
+Lottie animations
+Parallax scroll
+Smooth scroll effects
+UX BEHAVIOR
+Slight ripple effect on click
+Glow intensifies on hover
+Smooth scroll
+Sticky navigation
+LED style footer ticker
+FOOTER
+Include:
+Social links
+Contact email
+IP inquiry form
+Sponsor inquiry
+Media inquiry
+OVERALL MOOD
+Make it:
+Cinematic
+Broadcast-level
+Structured
+Authority-driven
+Global
+Competitive
+Investor-ready
+Esports-dominant
+Motion-rich
+3D immersive
+Not cluttered.
+Not childish.
+Premium. Controlled chaos.

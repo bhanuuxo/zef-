@@ -17,8 +17,9 @@ export default function PartnersSection() {
 
   return (
     <section id="partners" className="relative py-28 md:py-36 overflow-hidden">
-      <div className="absolute inset-0 bg-[#050508]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-radial from-[#A020F0]/[0.03] to-transparent rounded-full" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0515]/20 via-transparent to-transparent" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-radial from-[#A020F0]/[0.07] to-transparent rounded-full" />
+      <div className="absolute top-[10%] right-[20%] w-[350px] h-[350px] bg-[#FF2D95]/[0.04] rounded-full blur-[120px]" />
 
       <div ref={ref} className="relative z-10 max-w-6xl mx-auto px-4 md:px-8">
         <div className="text-center mb-16">

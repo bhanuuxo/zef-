@@ -24,10 +24,10 @@ export default function TimelineSection() {
 
   return (
     <section id="timeline" ref={sectionRef} className="relative py-28 md:py-36 overflow-hidden">
-      <div className="absolute inset-0 bg-[#050508]" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0515]/50 via-[#050508] to-[#050508]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0515]/35 via-transparent to-transparent" />
 
-      <div className="absolute top-[30%] left-[20%] w-[400px] h-[400px] bg-[#A020F0]/[0.03] rounded-full blur-[120px]" />
+      <div className="absolute top-[30%] left-[20%] w-[500px] h-[500px] bg-[#A020F0]/[0.08] rounded-full blur-[140px]" />
+      <div className="absolute bottom-[20%] right-[15%] w-[400px] h-[400px] bg-[#FF2D95]/[0.05] rounded-full blur-[130px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8">
         {/* Header */}

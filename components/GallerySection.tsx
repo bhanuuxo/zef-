@@ -27,7 +27,9 @@ export default function GallerySection() {
 
   return (
     <section id="gallery" className="relative py-28 md:py-36 overflow-hidden">
-      <div className="absolute inset-0 bg-[#050508]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0515]/25 via-transparent to-transparent" />
+      <div className="absolute top-[20%] right-[15%] w-[500px] h-[500px] bg-[#A020F0]/[0.06] rounded-full blur-[160px]" />
+      <div className="absolute bottom-[25%] left-[10%] w-[400px] h-[400px] bg-[#FF00FF]/[0.04] rounded-full blur-[140px]" />
 
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-4 md:px-8">
         <div className="text-center mb-12">

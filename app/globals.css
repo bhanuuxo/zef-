@@ -52,11 +52,11 @@ body {
 @layer utilities {
   .glow-text {
     color: #fff;
-    text-shadow: 0 0 7px var(--violet), 0 0 21px var(--violet), 0 0 42px var(--violet), 0 0 82px rgba(160,32,240,0.35);
+    text-shadow: 0 0 8px rgba(160,32,240,0.5), 0 0 24px rgba(160,32,240,0.2);
   }
   .glow-text-pink {
     color: #fff;
-    text-shadow: 0 0 7px var(--neon-pink), 0 0 21px var(--neon-pink), 0 0 42px var(--neon-pink), 0 0 82px rgba(255,0,255,0.3);
+    text-shadow: 0 0 8px rgba(255,0,255,0.5), 0 0 24px rgba(255,0,255,0.2);
   }
   .glow-text-sm {
     text-shadow: 0 0 6px var(--violet), 0 0 18px rgba(160,32,240,0.4);
@@ -114,13 +114,11 @@ body {
     z-index: 0;
   }
   .glass-card:hover {
-    border-color: rgba(160,32,240,0.35);
+    border-color: rgba(160,32,240,0.25);
     box-shadow:
-      0 0 30px rgba(160,32,240,0.1),
-      0 0 60px rgba(255,0,255,0.05),
-      0 20px 60px rgba(0,0,0,0.3),
-      inset 0 1px 0 rgba(255,255,255,0.04);
-    transform: translateY(-8px);
+      0 0 20px rgba(160,32,240,0.08),
+      0 8px 30px rgba(0,0,0,0.25);
+    transform: translateY(-3px);
   }
 
   /* Glow border */
@@ -296,9 +294,9 @@ body {
 .led-ticker-wrap {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, rgba(5,5,8,0.95), rgba(12,12,22,0.92));
-  border-top: 1px solid rgba(160,32,240,0.2);
-  border-bottom: 1px solid rgba(160,32,240,0.12);
+  background: rgba(5,5,8,0.6);
+  border-top: none;
+  border-bottom: none;
 }
 .led-ticker-wrap::before,
 .led-ticker-wrap::after {

@@ -33,9 +33,8 @@ export default function Footer() {
     <footer id="contact" className="relative overflow-hidden">
       {/* Contact Section */}
       <section className="relative py-28 md:py-36">
-        <div className="absolute inset-0 bg-[#050508]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0818]/30 via-transparent to-[#050508]" />
-        <div className="absolute inset-0 bg-grid-fine opacity-15" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0818]/25 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-grid-fine opacity-[0.05]" />
 
         <div ref={ref} className="relative z-10 max-w-6xl mx-auto px-4 md:px-8">
           <div className="text-center mb-16">
@@ -159,7 +158,7 @@ export default function Footer() {
       </div>
 
       {/* Footer Bottom */}
-      <div className="relative bg-[#050508] border-t border-white/[0.04]">
+      <div className="relative border-t border-white/[0.03]">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-14">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {/* Brand */}

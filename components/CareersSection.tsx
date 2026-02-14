@@ -37,8 +37,9 @@ export default function CareersSection() {
 
   return (
     <section id="careers" className="relative py-28 md:py-36 overflow-hidden">
-      <div className="absolute inset-0 bg-[#050508]" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0818]/30 via-transparent to-[#050508]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0818]/30 via-transparent to-transparent" />
+      <div className="absolute top-[25%] left-[15%] w-[450px] h-[450px] bg-[#A020F0]/[0.07] rounded-full blur-[150px]" />
+      <div className="absolute bottom-[15%] right-[20%] w-[400px] h-[400px] bg-[#00F0FF]/[0.04] rounded-full blur-[130px]" />
 
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-4 md:px-8">
         <div className="text-center mb-16">

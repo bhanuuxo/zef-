@@ -57,13 +57,12 @@ export default function NXTSection() {
 
   return (
     <section className="relative py-28 md:py-36 overflow-hidden" id="nxt">
-      {/* Background */}
-      <div className="absolute inset-0 bg-[#050508]" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0f0520]/50 via-[#050508] to-[#050508]" />
+      {/* Background — transparent to page atmosphere */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0f0520]/40 via-transparent to-transparent" />
 
       {/* Ambient glow */}
-      <div className="absolute top-[20%] left-[30%] w-[500px] h-[500px] bg-[#A020F0]/[0.04] rounded-full blur-[150px]" />
-      <div className="absolute bottom-[10%] right-[20%] w-[400px] h-[400px] bg-[#FF00FF]/[0.03] rounded-full blur-[120px]" />
+      <div className="absolute top-[20%] left-[30%] w-[600px] h-[600px] bg-[#A020F0]/[0.08] rounded-full blur-[180px]" />
+      <div className="absolute bottom-[10%] right-[20%] w-[500px] h-[500px] bg-[#FF00FF]/[0.06] rounded-full blur-[150px]" />
 
       <div ref={ref} className="relative z-10 max-w-6xl mx-auto px-4 md:px-8">
         {/* Badge */}
@@ -99,7 +98,7 @@ export default function NXTSection() {
         >
           <div className="flex items-center gap-2">
             <Calendar className="w-3.5 h-3.5 text-[#A020F0]" />
-            <span className="text-[11px] font-heading tracking-[0.1em]">February – March 2026</span>
+            <span className="text-[11px] font-heading tracking-[0.1em]">12th March 2026</span>
           </div>
           <div className="w-[1px] h-3 bg-[#A020F0]/20 hidden md:block" />
           <div className="flex items-center gap-2">
@@ -115,7 +114,7 @@ export default function NXTSection() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mb-20"
         >
-          <CountdownTimer targetDate={new Date("2026-02-15T10:00:00")} />
+          <CountdownTimer targetDate={new Date("2026-03-12T10:00:00")} />
         </motion.div>
 
         {/* NXT Badge */}

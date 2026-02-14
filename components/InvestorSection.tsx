@@ -17,11 +17,10 @@ export default function InvestorSection() {
 
   return (
     <section id="invest" className="relative py-28 md:py-36 overflow-hidden">
-      <div className="absolute inset-0 bg-[#050508]" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0818]/30 via-[#050508] to-[#0a0515]/20" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0818]/25 via-transparent to-[#0a0515]/15" />
 
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-radial from-[#A020F0]/[0.04] to-transparent rounded-full" />
-      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-gradient-radial from-[#FF00FF]/[0.03] to-transparent rounded-full" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-radial from-[#A020F0]/[0.07] to-transparent rounded-full" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-radial from-[#FF00FF]/[0.05] to-transparent rounded-full" />
 
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

@@ -3,14 +3,16 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { User, Linkedin, Twitter } from "lucide-react";
+import Image from "next/image";
 
 const team = [
-  { name: "Aniket Singh", role: "Founder & CEO", bio: "Visionary entrepreneur pioneering India's competitive gaming infrastructure. Under his leadership, ZEF has grown from a single tournament into a multi-IP esports ecosystem spanning cities and titles nationwide.", isFounder: true },
-  { name: "Ayan Khan", role: "Vice President — Head of Operations", bio: "The operational backbone of ZEF, orchestrating end-to-end event execution, team logistics, and competitive readiness across every league and tournament property." },
-  { name: "Bhanu Pratap Singh", role: "Associate — HR, Legal & Compliance", bio: "Ensures ZEF operates with integrity — managing talent acquisition, organizational policy, and regulatory compliance to build a sustainable esports enterprise." },
-  { name: "Adil Hassan", role: "Specialist — GFX", bio: "The creative force behind ZEF's visual identity — crafting tournament branding, social assets, and graphic systems that define the look of every IP." },
+  { name: "Aniket Singh", role: "Founder & CEO", bio: "Visionary entrepreneur pioneering India's competitive gaming infrastructure. Under his leadership, ZEF has grown from a single tournament into a multi-IP esports ecosystem spanning cities and titles nationwide.", isFounder: true, image: "/team/Aniket Singh.jpg" },
+  { name: "Ayan Khan", role: "Vice President — Head of Operations", bio: "The operational backbone of ZEF, orchestrating end-to-end event execution, team logistics, and competitive readiness across every league and tournament property.", image: "/team/Ayan Khan.jpg" },
+  { name: "Bhanu Pratap Singh", role: "Associate — HR, Legal & Compliance", bio: "Ensures ZEF operates with integrity — managing talent acquisition, organizational policy, and regulatory compliance to build a sustainable esports enterprise.", image: "/team/Bhanu Pratap Singh.jpg" },
+  { name: "Ankush Yadav", role: "Analyst — League & Content Strategist", bio: "Drives data-informed competitive formats and content strategy — shaping league structures, audience engagement, and editorial direction across ZEF platforms.", image: "/team/Ankush Yadav.png" },
+  { name: "Karthik K S", role: "Analyst — Software Developer", bio: "Architects and delivers the digital platforms powering ZEF — from tournament management systems to web experiences — ensuring seamless, scalable technology that keeps the competitive ecosystem running.", image: "/team/Karthik K S.jpg", objectFit: "object-contain" },
+  { name: "Adil Hassan", role: "Specialist — GFX", bio: "The creative force behind ZEF's visual identity — crafting tournament branding, social assets, and graphic systems that define the look of every IP.", image: "/team/Adil Hassan.png" },
   { name: "M. Imtiaz Ahmmed", role: "Specialist — VFX", bio: "Brings ZEF's broadcasts and content to life with dynamic motion graphics, visual effects, and cinematic production that elevate the viewer experience." },
-  { name: "Ankush Yadav", role: "Analyst — League & Content Strategist", bio: "Drives data-informed competitive formats and content strategy — shaping league structures, audience engagement, and editorial direction across ZEF platforms." },
 ];
 
 export default function AboutSection() {
@@ -71,10 +73,16 @@ export default function AboutSection() {
             <div className="absolute -top-20 -left-20 w-60 h-60 bg-[#A020F0]/[0.06] rounded-full blur-[100px]" />
             <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-[#FF00FF]/[0.04] rounded-full blur-[100px]" />
 
-            {/* Photo placeholder */}
+            {/* Photo */}
             <div className="relative flex-shrink-0">
               <div className="w-36 h-36 md:w-44 md:h-44 rounded-sm bg-gradient-to-br from-[#A020F0] to-[#FF00FF] flex items-center justify-center overflow-hidden">
-                <User className="w-16 h-16 text-white/60" />
+                <Image
+                  src="/team/Aniket Singh.jpg"
+                  alt="Aniket Singh"
+                  width={176}
+                  height={176}
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
               <div className="absolute -inset-1.5 rounded-sm border border-[#A020F0]/20 -z-10" />
               <motion.div
@@ -107,7 +115,7 @@ export default function AboutSection() {
         </motion.div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {team.slice(1).map((member, i) => {
             const accents = ["#A020F0", "#FF00FF", "#B44AFF", "#FF2D95", "#E6E6FA"];
             const accent = accents[i % accents.length];
@@ -117,22 +125,38 @@ export default function AboutSection() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.4 + i * 0.08 }}
-                className="glass-card rounded-sm p-5 text-center group relative overflow-hidden"
+                className="glass-card rounded-sm p-5 flex items-start gap-4 group relative overflow-hidden"
               >
                 <div className="absolute top-0 left-0 right-0 h-[1px]" style={{ background: `linear-gradient(90deg, transparent, ${accent}30, transparent)` }} />
 
-                <div
-                  className="w-14 h-14 mx-auto mb-3 rounded-sm flex items-center justify-center transition-all duration-300 border"
-                  style={{ background: `${accent}08`, borderColor: `${accent}20` }}
-                >
-                  <User className="w-6 h-6 text-[#6b6b80] group-hover:text-white/70 transition-colors" />
+                {/* Photo */}
+                <div className="relative flex-shrink-0">
+                  <div
+                    className="w-20 h-20 rounded-sm flex items-center justify-center overflow-hidden border"
+                    style={{ background: `${accent}08`, borderColor: `${accent}20` }}
+                  >
+                    {member.image ? (
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={80}
+                        height={80}
+                        className={`w-full h-full ${member.objectFit || "object-cover object-top"}`}
+                      />
+                    ) : (
+                      <User className="w-8 h-8 text-[#6b6b80] group-hover:text-white/70 transition-colors" />
+                    )}
+                  </div>
                 </div>
 
-                <h4 className="font-heading text-xs font-bold text-white/85 mb-1">{member.name}</h4>
-                <p className="text-[9px] font-heading tracking-[0.15em] uppercase mb-2.5" style={{ color: `${accent}cc` }}>
-                  {member.role}
-                </p>
-                <p className="text-[10px] text-[#6b6b80] leading-relaxed">{member.bio}</p>
+                {/* Info */}
+                <div className="flex-1 min-w-0">
+                  <h4 className="font-heading text-sm font-bold text-white/85 mb-0.5">{member.name}</h4>
+                  <p className="text-[9px] font-heading tracking-[0.15em] uppercase mb-2" style={{ color: `${accent}cc` }}>
+                    {member.role}
+                  </p>
+                  <p className="text-[10px] text-[#6b6b80] leading-relaxed">{member.bio}</p>
+                </div>
               </motion.div>
             );
           })}

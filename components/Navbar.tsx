@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -56,11 +57,14 @@ export default function Navbar() {
           </button>
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-8 h-8 rounded-[4px] flex items-center justify-center font-heading font-black text-xs bg-gradient-to-br from-[#A020F0] to-[#7c3aed]">
-              Z
-            </div>
-            <span className="font-heading font-bold text-[13px] tracking-[0.12em] text-white/90 hidden sm:block">ZARX</span>
+          <Link href="/" className="flex items-center group">
+            <Image
+              src="/logo.png"
+              alt="ZARX Esports Forum"
+              width={36}
+              height={36}
+              className="h-9 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Nav — minimal */}

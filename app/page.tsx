@@ -58,12 +58,16 @@ export default function HomePage() {
         <Navbar />
         <HeroSection />
         <LEDTicker />
-        <NXTSection />
-        <EcosystemSection />
-        <TimelineSection />
-        <PartnersSection />
-        <InvestorSection />
-        <Footer />
+        {/* Backdrop overlay from ticker to footer — dims the shader background */}
+        <div className="relative">
+          <div className="absolute inset-0 bg-[#050508]/60 pointer-events-none" />
+          <NXTSection />
+          <EcosystemSection />
+          <TimelineSection />
+          <PartnersSection />
+          <InvestorSection />
+          <Footer />
+        </div>
       </div>
     </main>
   );

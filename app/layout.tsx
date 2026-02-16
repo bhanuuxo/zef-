@@ -16,11 +16,16 @@ export const metadata: Metadata = {
     "NSL 2026",
     "GSL 2026",
   ],
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: "ZARX Esports Forum | Global Esports IP Curator",
     description:
       "Designing the Future Infrastructure of Global Competitive Gaming",
     type: "website",
+    images: [{ url: "/logo.png", width: 512, height: 512, alt: "ZARX Esports Forum" }],
   },
 };
 

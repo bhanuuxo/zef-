@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { Mail, MapPin, Instagram, Twitter, Youtube, Linkedin, Twitch, ArrowRight, Send, Globe, Gamepad2 } from "lucide-react";
+import Image from "next/image";
 
 const socialLinks = [
   { name: "Instagram", icon: Instagram, href: "#" },
@@ -14,9 +15,9 @@ const socialLinks = [
 ];
 
 const footerLinks = [
-  { title: "Explore", links: [{ name: "Home", href: "#home" }, { name: "About Us", href: "#about" }, { name: "Our IPs", href: "#ips" }, { name: "Timeline", href: "#timeline" }, { name: "Media Gallery", href: "#gallery" }] },
-  { title: "Events", links: [{ name: "NXT in Gaming 2026", href: "#nxt" }, { name: "NSL 2026", href: "/nsl2026" }, { name: "GSL 2026", href: "#ips" }, { name: "Champions League", href: "#timeline" }, { name: "Winter Wars", href: "#timeline" }] },
-  { title: "Connect", links: [{ name: "Careers", href: "#careers" }, { name: "Partner With Us", href: "#partners" }, { name: "Invest", href: "#invest" }, { name: "Media Inquiries", href: "#contact" }, { name: "Sponsor Inquiry", href: "#contact" }] },
+  { title: "Explore", links: [{ name: "Home", href: "/" }, { name: "About Us", href: "/about" }, { name: "Our IPs", href: "/ips" }, { name: "Timeline", href: "#timeline" }, { name: "Media Gallery", href: "/gallery" }] },
+  { title: "Events", links: [{ name: "NXT in Gaming 2026", href: "#nxt" }, { name: "NSL 2026", href: "/nsl2026" }, { name: "GSL 2026", href: "/ips" }, { name: "Champions League", href: "#timeline" }, { name: "Winter Wars", href: "#timeline" }] },
+  { title: "Connect", links: [{ name: "Careers", href: "/careers" }, { name: "Partner With Us", href: "#partners" }, { name: "Invest", href: "#invest" }, { name: "Media Inquiries", href: "#contact" }, { name: "Sponsor Inquiry", href: "#contact" }] },
 ];
 
 const tickerLogos = [
@@ -162,17 +163,23 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {/* Brand */}
             <div className="lg:col-span-2">
-              <Link href="/" className="flex items-center gap-2.5 mb-5 group">
-                <div className="w-8 h-8 rounded-sm bg-gradient-to-br from-[#A020F0] to-[#FF00FF] flex items-center justify-center font-heading font-black text-sm">Z</div>
-                <div>
-                  <span className="font-heading font-bold text-sm tracking-wider">ZARX</span>
-                  <span className="font-heading text-[8px] text-[#E6E6FA]/60 block -mt-0.5 tracking-[0.2em]">ESPORTS FORUM</span>
-                </div>
+              <Link href="/" className="flex items-center mb-5 group">
+                <Image
+                  src="/logo.png"
+                  alt="ZARX Esports Forum"
+                  width={36}
+                  height={36}
+                  className="h-9 w-auto object-contain"
+                />
               </Link>
               <p className="text-[11px] text-[#555568] leading-relaxed max-w-sm mb-5">
                 ZARX Esports Forum is a global competitive gaming IP curator building structured esports ecosystems across titles and territories.
               </p>
               <p className="text-[10px] text-[#333345]">&copy; {new Date().getFullYear()} ZARX Esports Forum. All rights reserved.</p>
+              <div className="flex gap-4 mt-2">
+                <Link href="/terms" className="text-[10px] text-[#444458] hover:text-[#A020F0] transition-colors">Terms &amp; Conditions</Link>
+                <Link href="/privacy" className="text-[10px] text-[#444458] hover:text-[#A020F0] transition-colors">Privacy Policy</Link>
+              </div>
             </div>
 
             {/* Links */}

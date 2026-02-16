@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Calendar, MapPin, Tv, Building2, Cpu, Shield } from "lucide-react";
+import Image from "next/image";
 
 function CountdownTimer({ targetDate }: { targetDate: Date }) {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -47,10 +48,10 @@ function CountdownTimer({ targetDate }: { targetDate: Date }) {
 }
 
 const partners = [
-  { icon: Tv, label: "Official Media Partner", name: "NewsX" },
-  { icon: Building2, label: "Brand & Sponsorship Partner", name: "BNS Consulting" },
-  { icon: Cpu, label: "Technology Partner", name: "ZARX Technologies Pvt Ltd" },
-  { icon: Shield, label: "Managed by", name: "X Arena" },
+  { icon: Tv, label: "Official Media Partner", name: "NewsX", logo: "/partners/media partner.png" },
+  { icon: Building2, label: "Brand & Sponsorship Partner", name: "Bien-être Consulting", logo: "/partners/brand & sponsorship partner.png", logoClass: "scale-[2.8]" },
+  { icon: Cpu, label: "Technology Partner", name: "ZARX Technologies Pvt Ltd", logo: "/partners/technology partner.png" },
+  { icon: Shield, label: "Managed by", name: "X Arena", logo: "/partners/managing partner.png" },
 ];
 
 export default function NXTSection() {
@@ -155,7 +156,19 @@ export default function NXTSection() {
               transition={{ duration: 0.5, delay: 0.5 + i * 0.08 }}
               className="glass-card rounded-sm p-6 text-center group"
             >
-              <partner.icon className="w-7 h-7 mx-auto mb-3 text-[#A020F0]/50 group-hover:text-[#A020F0] transition-colors duration-500" />
+              <div className="w-20 h-20 mx-auto mb-3 rounded-sm flex items-center justify-center overflow-hidden border border-[#A020F0]/20 bg-[#A020F0]/[0.03] p-2">
+                {partner.logo ? (
+                  <Image
+                    src={partner.logo}
+                    alt={partner.name}
+                    width={80}
+                    height={80}
+                    className={`w-full h-full ${partner.logoClass || 'object-contain'}`}
+                  />
+                ) : (
+                  <partner.icon className="w-7 h-7 text-[#A020F0]/50 group-hover:text-[#A020F0] transition-colors duration-500" />
+                )}
+              </div>
               <p className="text-[8px] text-[#6b6b80] font-heading tracking-[0.2em] uppercase mb-1.5">{partner.label}</p>
               <p className="font-heading font-bold text-xs text-white/90 tracking-wider">{partner.name}</p>
             </motion.div>

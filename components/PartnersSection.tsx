@@ -3,12 +3,13 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Tv, Building2, Cpu, Shield } from "lucide-react";
+import Image from "next/image";
 
 const partners = [
-  { name: "NewsX", type: "Media Partner", icon: Tv, description: "Official media partner providing broadcast coverage and content distribution.", accent: "#A020F0" },
-  { name: "BNS Consulting", type: "Brand & Sponsorship Partner", icon: Building2, description: "Strategic brand partnerships and sponsorship management.", accent: "#FF00FF" },
-  { name: "ZARX Technologies Pvt Ltd", type: "Technology Partner", icon: Cpu, description: "Platform technology, infrastructure, and digital solutions.", accent: "#B44AFF" },
-  { name: "X Arena", type: "Managing Partner", icon: Shield, description: "Event management, venue operations, and execution.", accent: "#FF2D95" },
+  { name: "NewsX", type: "Media Partner", icon: Tv, description: "Official media partner providing broadcast coverage and content distribution.", accent: "#A020F0", logo: "/partners/media partner.png" },
+  { name: "Bien-être Consulting", type: "Brand & Sponsorship Partner", icon: Building2, description: "Strategic brand partnerships and sponsorship management.", accent: "#FF00FF", logo: "/partners/brand & sponsorship partner.png", logoClass: "scale-[2.8] object-contain" },
+  { name: "ZARX Technologies Pvt Ltd", type: "Technology Partner", icon: Cpu, description: "Platform technology, infrastructure, and digital solutions.", accent: "#B44AFF", logo: "/partners/technology partner.png" },
+  { name: "X Arena", type: "Managing Partner", icon: Shield, description: "Event management, venue operations, and execution.", accent: "#FF2D95", logo: "/partners/managing partner.png" },
 ];
 
 export default function PartnersSection() {
@@ -75,10 +76,20 @@ export default function PartnersSection() {
                 />
 
                 <div
-                  className="w-14 h-14 mx-auto mb-5 rounded-sm flex items-center justify-center group-hover:shadow-lg transition-all duration-300 border"
+                  className="w-28 h-28 mx-auto mb-5 rounded-sm flex items-center justify-center group-hover:shadow-lg transition-all duration-300 border overflow-hidden p-3"
                   style={{ background: `${partner.accent}08`, borderColor: `${partner.accent}20`, boxShadow: `0 0 20px ${partner.accent}10` }}
                 >
-                  <partner.icon className="w-6 h-6" style={{ color: partner.accent }} />
+                  {partner.logo ? (
+                    <Image
+                      src={partner.logo}
+                      alt={partner.name}
+                      width={112}
+                      height={112}
+                      className={`w-full h-full ${partner.logoClass || 'object-contain'}`}
+                    />
+                  ) : (
+                    <partner.icon className="w-8 h-8" style={{ color: partner.accent }} />
+                  )}
                 </div>
 
                 <span className="text-[8px] font-heading tracking-[0.2em] uppercase block mb-2" style={{ color: `${partner.accent}99` }}>

@@ -1,26 +1,31 @@
 "use client";
 
+import { useRef, useEffect, useCallback } from "react";
+import Image from "next/image";
+
 const games = [
-  "VALORANT",
-  "CLASH OF CLANS",
-  "LEAGUE OF LEGENDS",
-  "PUBG MOBILE",
-  "FREE FIRE MAX",
-  "CLASH ROYALE",
-  "POKÉMON UNITE",
-  "BGMI",
+  { name: "VALORANT", logo: "/games/valorant.png" },
+  { name: "CLASH OF CLANS", logo: "/games/clash-of-clans.png" },
+  { name: "LEAGUE OF LEGENDS", logo: "/games/league-of-legends.png" },
+  { name: "PUBG MOBILE", logo: "/games/pubg-mobile.png" },
+  { name: "FREE FIRE MAX", logo: "/games/free-fire-max.png" },
+  { name: "CLASH ROYALE", logo: "/games/clash-royale.png" },
+  { name: "POKÉMON UNITE", logo: "/games/pokemon-unite.png" },
+  { name: "BGMI", logo: "/games/bgmi.jpeg" },
 ];
 
-function LogoItem({ name }: { name: string }) {
+function LogoItem({ name, logo }: { name: string; logo: string }) {
   return (
     <div className="flex-shrink-0 flex items-center gap-4 mx-6 md:mx-10 group cursor-default select-none">
-      {/* Stylized icon */}
-      <div className="w-8 h-8 md:w-9 md:h-9 rounded-sm border border-[#A020F0]/20 flex items-center justify-center bg-[#A020F0]/[0.03] group-hover:bg-[#A020F0]/[0.08] group-hover:border-[#A020F0]/40 transition-all duration-500 relative overflow-hidden">
-        <span className="font-heading font-black text-xs text-[#A020F0]/40 group-hover:text-[#A020F0]/80 transition-colors duration-500">
-          {name.charAt(0)}
-        </span>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#A020F0]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      </div>
+      {/* Game Logo */}
+      <Image
+        src={logo}
+        alt={name}
+        width={36}
+        height={36}
+        className="w-9 h-9 md:w-10 md:h-10 object-contain flex-shrink-0 group-hover:scale-110 transition-transform duration-500"
+        draggable={false}
+      />
       <span
         className="text-[11px] md:text-xs font-heading font-bold tracking-[0.18em] uppercase text-[#555568] group-hover:text-[#A020F0]/80 transition-all duration-500 whitespace-nowrap"
       >
@@ -33,13 +38,37 @@ function LogoItem({ name }: { name: string }) {
 }
 
 export default function LEDTicker() {
-  const allLogos = [...games, ...games, ...games, ...games];
+  const trackRef = useRef<HTMLDivElement>(null);
+  const offsetRef = useRef(0);
+  const rafRef = useRef<number>(0);
+
+  const SPEED = 1.5;
+
+  const allLogos = [...games, ...games];
+
+  const animate = useCallback(() => {
+    const track = trackRef.current;
+    if (track) {
+      offsetRef.current += SPEED;
+      const halfWidth = track.scrollWidth / 2;
+      if (offsetRef.current >= halfWidth) {
+        offsetRef.current -= halfWidth;
+      }
+      track.style.transform = `translateX(${-offsetRef.current}px)`;
+    }
+    rafRef.current = requestAnimationFrame(animate);
+  }, []);
+
+  useEffect(() => {
+    rafRef.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(rafRef.current);
+  }, [animate]);
 
   return (
-    <div className="led-ticker-wrap py-4 md:py-5 relative">
-      <div className="flex animate-ticker">
-        {allLogos.map((logo, i) => (
-          <LogoItem key={`${logo}-${i}`} name={logo} />
+    <div className="led-ticker-wrap py-4 md:py-5 relative overflow-hidden">
+      <div ref={trackRef} className="flex will-change-transform">
+        {allLogos.map((game, i) => (
+          <LogoItem key={`${game.name}-${i}`} name={game.name} logo={game.logo} />
         ))}
       </div>
     </div>

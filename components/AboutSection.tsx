@@ -5,12 +5,12 @@ import { motion, useInView } from "framer-motion";
 import { User, Linkedin, Twitter } from "lucide-react";
 
 const team = [
-  { name: "Aniket Singh", role: "Founder & CEO", bio: "Visionary entrepreneur building the future infrastructure of global competitive gaming.", isFounder: true },
-  { name: "Team Member", role: "Head of Operations", bio: "Manages league operations, team onboarding, and competitive readiness across all ZEF properties.", isFounder: false },
-  { name: "Team Member", role: "Broadcast Director", bio: "End-to-end live broadcast execution with multi-platform streaming and content production.", isFounder: false },
-  { name: "Team Member", role: "Head of Partnerships", bio: "Driving brand partnerships, sponsorships, and strategic alliances across the esports ecosystem.", isFounder: false },
-  { name: "Team Member", role: "Lead Developer", bio: "Building the technical infrastructure powering ZEF's competitive platforms and digital experiences.", isFounder: false },
-  { name: "Team Member", role: "Creative Director", bio: "Shaping the visual identity and creative direction of all ZEF IP brands and media.", isFounder: false },
+  { name: "Aniket Singh", role: "Founder & CEO", bio: "Visionary entrepreneur pioneering India's competitive gaming infrastructure. Under his leadership, ZEF has grown from a single tournament into a multi-IP esports ecosystem spanning cities and titles nationwide.", isFounder: true },
+  { name: "Ayan Khan", role: "Vice President — Head of Operations", bio: "The operational backbone of ZEF, orchestrating end-to-end event execution, team logistics, and competitive readiness across every league and tournament property." },
+  { name: "Bhanu Pratap Singh", role: "Associate — HR, Legal & Compliance", bio: "Ensures ZEF operates with integrity — managing talent acquisition, organizational policy, and regulatory compliance to build a sustainable esports enterprise." },
+  { name: "Adil Hassan", role: "Specialist — GFX", bio: "The creative force behind ZEF's visual identity — crafting tournament branding, social assets, and graphic systems that define the look of every IP." },
+  { name: "M. Imtiaz Ahmmed", role: "Specialist — VFX", bio: "Brings ZEF's broadcasts and content to life with dynamic motion graphics, visual effects, and cinematic production that elevate the viewer experience." },
+  { name: "Ankush Yadav", role: "Analyst — League & Content Strategist", bio: "Drives data-informed competitive formats and content strategy — shaping league structures, audience engagement, and editorial direction across ZEF platforms." },
 ];
 
 export default function AboutSection() {
@@ -19,9 +19,7 @@ export default function AboutSection() {
 
   return (
     <section id="about" className="relative py-28 md:py-36 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0818]/35 via-transparent to-transparent" />
-      <div className="absolute top-[15%] right-[10%] w-[500px] h-[500px] bg-[#A020F0]/[0.07] rounded-full blur-[160px]" />
-      <div className="absolute bottom-[20%] left-[5%] w-[400px] h-[400px] bg-[#00F0FF]/[0.04] rounded-full blur-[130px]" />
+
 
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-4 md:px-8">
         {/* Header */}
@@ -95,7 +93,7 @@ export default function AboutSection() {
                 Aniket Singh
               </h3>
               <p className="text-[#8a8a9a] text-sm leading-relaxed mb-5 max-w-lg">
-                Visionary entrepreneur building the future infrastructure of global competitive gaming. Leading ZEF&apos;s mission to curate, scale, and structure esports IPs across titles and territories worldwide.
+                Visionary entrepreneur pioneering India&apos;s competitive gaming infrastructure. Under his leadership, ZEF has grown from a single tournament into a multi-IP esports ecosystem spanning cities and titles nationwide.
               </p>
               <div className="flex gap-2.5 justify-center md:justify-start">
                 {[Linkedin, Twitter].map((Icon, idx) => (

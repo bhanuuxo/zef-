@@ -177,18 +177,6 @@ export default function NSL2026Page() {
             <a href="#register" className="btn-outline text-sm px-6 py-2.5 border-[#FF00FF]/25 hover:bg-[#FF00FF]/[0.06]">Sponsor Inquiry</a>
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        >
-          <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 2, repeat: Infinity }} className="flex flex-col items-center gap-2 text-[#555568] text-[9px] font-heading tracking-[0.3em]">
-            <span>SCROLL</span>
-            <div className="w-[1px] h-6 bg-gradient-to-b from-[#A020F0]/40 to-transparent" />
-          </motion.div>
-        </motion.div>
       </section>
 
       {/* ===== TICKETS SECTION ===== */}

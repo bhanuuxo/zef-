@@ -1,22 +1,16 @@
 "use client";
 
 import { useEffect } from "react";
-import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
+import FloatingLines from "@/components/FloatingLines";
 import HeroSection from "@/components/HeroSection";
 import LEDTicker from "@/components/LEDTicker";
 import NXTSection from "@/components/NXTSection";
 import EcosystemSection from "@/components/EcosystemSection";
 import TimelineSection from "@/components/TimelineSection";
-import IPsSection from "@/components/IPsSection";
-import AboutSection from "@/components/AboutSection";
 import PartnersSection from "@/components/PartnersSection";
 import InvestorSection from "@/components/InvestorSection";
-import CareersSection from "@/components/CareersSection";
-import GallerySection from "@/components/GallerySection";
 import Footer from "@/components/Footer";
-
-const FloatingLines = dynamic(() => import("@/components/FloatingLines"), { ssr: false });
 
 /* ===== Smooth Scroll ===== */
 function useSmoothScroll() {
@@ -43,7 +37,7 @@ export default function HomePage() {
   return (
     <main className="relative bg-[#050508] min-h-screen overflow-hidden">
       {/* ── FloatingLines shader background — fixed, covers entire page ── */}
-      <div className="fixed inset-0 z-0 pointer-events-none" aria-hidden="true">
+      <div className="fixed inset-0 z-0 pointer-events-none opacity-90 bg-[#050508]" aria-hidden="true">
         <FloatingLines
           enabledWaves={["top", "middle", "bottom"]}
           lineCount={[6]}
@@ -67,12 +61,8 @@ export default function HomePage() {
         <NXTSection />
         <EcosystemSection />
         <TimelineSection />
-        <IPsSection />
-        <AboutSection />
         <PartnersSection />
         <InvestorSection />
-        <CareersSection />
-        <GallerySection />
         <Footer />
       </div>
     </main>

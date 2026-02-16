@@ -33,8 +33,7 @@ export default function Footer() {
     <footer id="contact" className="relative overflow-hidden">
       {/* Contact Section */}
       <section className="relative py-28 md:py-36">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0818]/25 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-grid-fine opacity-[0.05]" />
+
 
         <div ref={ref} className="relative z-10 max-w-6xl mx-auto px-4 md:px-8">
           <div className="text-center mb-16">
@@ -103,8 +102,8 @@ export default function Footer() {
                 <h3 className="font-heading text-sm font-bold mb-4 text-white/85">Contact Information</h3>
                 <div className="space-y-3.5">
                   {[
-                    { icon: Mail, label: "EMAIL", value: "contact@zarxesports.com", accent: "#A020F0" },
-                    { icon: Globe, label: "WEB", value: "www.zarxesports.com", accent: "#FF00FF" },
+                    { icon: Mail, label: "EMAIL", value: "info@zefglobal.com", accent: "#A020F0" },
+                    { icon: Globe, label: "WEB", value: "zarxtechnologies.com", accent: "#FF00FF" },
                     { icon: MapPin, label: "LOCATION", value: "New Delhi, India", accent: "#B44AFF" },
                   ].map((item) => (
                     <div key={item.label} className="flex items-center gap-3.5">
@@ -158,7 +157,7 @@ export default function Footer() {
       </div>
 
       {/* Footer Bottom */}
-      <div className="relative border-t border-white/[0.03]">
+      <div className="relative glass">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-14">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {/* Brand */}

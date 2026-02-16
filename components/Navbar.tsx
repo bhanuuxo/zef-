@@ -6,11 +6,12 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { name: "About", href: "#about" },
-  { name: "Ecosystem", href: "#ecosystem" },
-  { name: "Our IPs", href: "#ips" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Our IPs", href: "/ips" },
   { name: "NSL 2026", href: "/nsl2026" },
-  { name: "Partners", href: "#partners" },
+  { name: "Careers", href: "/careers" },
+  { name: "Gallery", href: "/gallery" },
 ];
 
 export default function Navbar() {
@@ -36,6 +37,24 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-6xl mx-auto px-5 md:px-8 flex items-center justify-between">
+          {/* Mobile Toggle — left side */}
+          <button
+            onClick={() => setIsMobileOpen(!isMobileOpen)}
+            className="md:hidden p-2 text-[#8a8a9a] hover:text-white transition-colors"
+          >
+            <AnimatePresence mode="wait">
+              {isMobileOpen ? (
+                <motion.div key="close" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.15 }}>
+                  <X size={20} />
+                </motion.div>
+              ) : (
+                <motion.div key="menu" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.15 }}>
+                  <Menu size={20} />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </button>
+
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
             <div className="w-8 h-8 rounded-[4px] flex items-center justify-center font-heading font-black text-xs bg-gradient-to-br from-[#A020F0] to-[#7c3aed]">
@@ -71,24 +90,6 @@ export default function Navbar() {
           <a href="#contact" className="hidden md:inline-flex items-center px-5 py-2 text-[11px] font-heading font-semibold tracking-[0.1em] uppercase text-white bg-[#A020F0] rounded-[3px] hover:bg-[#8b18d4] transition-colors duration-200">
             Contact
           </a>
-
-          {/* Mobile Toggle */}
-          <button
-            onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="md:hidden p-2 text-[#8a8a9a] hover:text-white transition-colors"
-          >
-            <AnimatePresence mode="wait">
-              {isMobileOpen ? (
-                <motion.div key="close" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.15 }}>
-                  <X size={20} />
-                </motion.div>
-              ) : (
-                <motion.div key="menu" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.15 }}>
-                  <Menu size={20} />
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </button>
         </div>
       </motion.nav>
 

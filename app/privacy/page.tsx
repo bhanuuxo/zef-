@@ -317,7 +317,7 @@ export default function PrivacyPolicy() {
                 <p className="font-heading text-xs font-bold text-white/90 mb-3">ZARX Esports Forum — Data Protection</p>
                 <p className="text-[11px] text-[#6b6b80] mb-2">A division of ZARX Technologies Private Limited</p>
                 <p>Email: <a href="mailto:info@zefglobal.com" className="text-[#A020F0] hover:underline">info@zefglobal.com</a></p>
-                <p>Website: <a href="https://zarxtechnologies.com" target="_blank" rel="noopener noreferrer" className="text-[#A020F0] hover:underline">zarxtechnologies.com</a></p>
+                <p>Contact: <a href="tel:+917899589100" className="text-[#A020F0] hover:underline">+91 7899589100</a></p>
               </div>
               <p className="mt-4">We will endeavor to respond to all legitimate requests within thirty (30) days. Occasionally it may take longer if your request is particularly complex or if you have made multiple requests, in which case we will notify you and keep you updated on our progress.</p>
             </section>

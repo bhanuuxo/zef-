@@ -214,12 +214,9 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
   }
 
   const accentMap: Record<string, string> = {
-    News: "#A020F0",
-    Tournaments: "#FF00FF",
-    Industry: "#B44AFF",
-    Guides: "#00F0FF",
-    Interviews: "#FF2D95",
-    Updates: "#FFD700",
+    Global: "#A020F0",
+    National: "#FF00FF",
+    Esports: "#00F0FF",
   };
 
   if (!post) {

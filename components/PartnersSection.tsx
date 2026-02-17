@@ -87,8 +87,9 @@ export default function PartnersSection() {
                     <Image
                       src={partner.logo}
                       alt={partner.name}
-                      width={112}
-                      height={112}
+                      width={256}
+                      height={256}
+                      quality={100}
                       className={`w-full h-full ${partner.logoClass || 'object-contain'}`}
                     />
                   ) : (

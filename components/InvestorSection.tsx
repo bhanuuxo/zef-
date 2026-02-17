@@ -106,10 +106,10 @@ export default function InvestorSection() {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { label: "IPs Owned", value: "3+" },
-              { label: "Events Delivered", value: "10+" },
-              { label: "Prize Pool", value: "₹40K+" },
-              { label: "Cities", value: "5+" },
+              { label: "Impressions", value: "2M+" },
+              { label: "Players", value: "10K+" },
+              { label: "Teams", value: "800+" },
+              { label: "League Tournaments", value: "7+" },
             ].map((stat, i) => (
               <motion.div
                 key={stat.label}

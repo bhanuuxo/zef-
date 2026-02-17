@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Calendar, MapPin, Tv, Building2, Cpu, Shield } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
 import Image from "next/image";
 
 function CountdownTimer({ targetDate }: { targetDate: Date }) {
@@ -46,13 +46,6 @@ function CountdownTimer({ targetDate }: { targetDate: Date }) {
     </div>
   );
 }
-
-const partners = [
-  { icon: Tv, label: "Official Media Partner", name: "NewsX", logo: "/partners/media partner.png", href: "https://share.google/BHr2sk35ghxdQTsoc" },
-  { icon: Building2, label: "Brand & Sponsorship Partner", name: "Bien-être Consulting", logo: "/partners/brand & sponsorship partner.png", logoClass: "scale-[2.8]", href: "https://share.google/3ieguvHtxBmPHUQDJ" },
-  { icon: Cpu, label: "Technology Partner", name: "ZARX Technologies Pvt Ltd", logo: "/partners/technology partner.png", href: "https://share.google/Uaw0FtdYHcqpmMCH1" },
-  { icon: Shield, label: "Managed by", name: "X Arena", logo: "/partners/managing partner.png", href: "#" },
-];
 
 export default function NXTSection() {
   const ref = useRef(null);
@@ -126,11 +119,15 @@ export default function NXTSection() {
             className="relative"
           >
             <div className="glass-card rounded-sm px-12 py-10 text-center max-w-md">
-              <div className="w-20 h-20 mx-auto mb-5 rounded-sm flex items-center justify-center relative overflow-hidden"
-                style={{ background: "linear-gradient(135deg, #A020F0, #FF00FF)" }}
-              >
-                <span className="font-heading font-black text-2xl relative z-10">NXT</span>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+              <div className="w-44 h-44 mx-auto mb-5 rounded-sm flex items-center justify-center relative overflow-hidden bg-white p-3">
+                <Image
+                  src="/NXT 2026/NextinGaming.png"
+                  alt="NXT in Gaming 2026"
+                  width={512}
+                  height={512}
+                  quality={100}
+                  className="w-full h-full object-contain relative z-10"
+                />
               </div>
               <h3 className="font-heading text-lg font-bold mb-2 tracking-wider">NXT in Gaming 2026</h3>
               <p className="text-[#6b6b80] text-xs tracking-wider leading-relaxed">
@@ -139,47 +136,6 @@ export default function NXTSection() {
             </div>
             <div className="absolute -inset-8 bg-gradient-radial from-[#A020F0]/8 to-transparent rounded-full blur-2xl -z-10" />
           </motion.div>
-        </motion.div>
-
-        {/* Partners Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.5 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
-        >
-          {partners.map((partner, i) => (
-            <motion.div
-              key={partner.name}
-              initial={{ opacity: 0, y: 25 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.5 + i * 0.08 }}
-              className="glass-card rounded-sm p-6 text-center group"
-            >
-              <a
-                href={partner.href}
-                target={partner.href !== "#" ? "_blank" : undefined}
-                rel={partner.href !== "#" ? "noopener noreferrer" : undefined}
-                className="block"
-              >
-              <div className="w-20 h-20 mx-auto mb-3 rounded-sm flex items-center justify-center overflow-hidden border border-[#A020F0]/20 bg-[#A020F0]/[0.03] p-2">
-                {partner.logo ? (
-                  <Image
-                    src={partner.logo}
-                    alt={partner.name}
-                    width={80}
-                    height={80}
-                    className={`w-full h-full ${partner.logoClass || 'object-contain'}`}
-                  />
-                ) : (
-                  <partner.icon className="w-7 h-7 text-[#A020F0]/50 group-hover:text-[#A020F0] transition-colors duration-500" />
-                )}
-              </div>
-              <p className="text-[8px] text-[#6b6b80] font-heading tracking-[0.2em] uppercase mb-1.5">{partner.label}</p>
-              <p className="font-heading font-bold text-xs text-white/90 tracking-wider">{partner.name}</p>
-              </a>
-            </motion.div>
-          ))}
         </motion.div>
 
         {/* CTA */}

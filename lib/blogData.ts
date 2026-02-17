@@ -12,9 +12,13 @@ export interface BlogPost {
   tags: string[];
 }
 
-export const categories = ["All", "News", "Tournaments", "Industry", "Guides", "Interviews", "Updates"];
+export const categories = ["All", "Global", "National", "Esports"];
 
 export const blogPosts: BlogPost[] = [
+  // All blog posts hidden for now — will be added back with custom images and content
+];
+
+export const _blogPostsArchive: BlogPost[] = [
   {
     id: 1,
     title: "NXT in Gaming 2026: India's Biggest Esports Exhibition Announced",
@@ -48,7 +52,7 @@ The event is backed by an impressive roster of strategic partners including News
 Early bird registrations for NXT in Gaming 2026 are now open on the ZEF platform. Attendee passes start at ₹499, with premium VIP experiences available for serious esports enthusiasts.
 
 Stay tuned for more announcements as we get closer to India's biggest gaming event of the year.`,
-    category: "News",
+    category: "National",
     date: "Feb 15, 2026",
     readTime: "5 min read",
     image: "",
@@ -96,7 +100,7 @@ NewsX has signed on as the official broadcast partner, ensuring NSL matches reac
 "The city-based model isn't just about competition — it's about building communities," says Ayan Khan, IPL Head at ZEF. "When you represent your city, the stakes feel personal. That's what drives engagement."
 
 The NSL 2026 season is expected to kick off in Q2 2026, with franchise applications opening soon.`,
-    category: "Tournaments",
+    category: "National",
     date: "Feb 12, 2026",
     readTime: "4 min read",
     image: "",
@@ -150,7 +154,7 @@ As India's premier esports IP curator, ZARX Esports Forum is actively shaping th
 The future of Indian mobile esports is incredibly bright. With 5G rollout accelerating, cloud gaming becoming mainstream, and increasing institutional investment, we expect the ecosystem to mature rapidly through 2026 and beyond.
 
 The question is no longer whether mobile esports is legitimate — it's how fast it will grow.`,
-    category: "Industry",
+    category: "Global",
     date: "Feb 10, 2026",
     readTime: "7 min read",
     image: "",
@@ -218,7 +222,7 @@ Revenue generation through partnerships, sponsorships, and business deals keeps 
 5. **Start small** — Local events and online communities are your launchpad
 
 The esports industry is growing faster than its talent pipeline. If you're passionate about gaming and willing to put in the work, there's never been a better time to build your career.`,
-    category: "Guides",
+    category: "Esports",
     date: "Feb 8, 2026",
     readTime: "6 min read",
     image: "",
@@ -276,7 +280,7 @@ For tournament organizers using the ZEF platform, these tools are now available 
 Phase 2 of the partnership, scheduled for Q3 2026, will introduce AI-powered matchmaking, predictive analytics for viewer engagement, and virtual reality spectator modes.
 
 The ZARX Technologies partnership represents a foundational investment in the long-term professionalization of Indian esports.`,
-    category: "News",
+    category: "National",
     date: "Feb 5, 2026",
     readTime: "3 min read",
     image: "",
@@ -333,7 +337,7 @@ Our partnership with ZEF is just the beginning. We're committed to being at the 
 The NewsX partnership represents a significant step toward mainstream legitimacy for Indian esports. As the media landscape evolves, the convergence of traditional broadcasting and competitive gaming seems not just inevitable, but imminent.
 
 Stay tuned for more exclusive interviews and behind-the-scenes content from the ZEF ecosystem.`,
-    category: "Interviews",
+    category: "Global",
     date: "Feb 3, 2026",
     readTime: "8 min read",
     image: "",
@@ -396,7 +400,7 @@ The total prize pool for GSL 2026 will be distributed across all 12 titles, with
 Registration for GSL 2026 opens on March 1, 2026. Teams and individual competitors can sign up through the ZEF platform. Early registrants receive exclusive merchandise and priority scheduling.
 
 Mark your calendars — GSL 2026 is going to be legendary.`,
-    category: "Tournaments",
+    category: "Esports",
     date: "Jan 30, 2026",
     readTime: "4 min read",
     image: "",
@@ -462,7 +466,7 @@ Future updates in the pipeline include:
 - **Mobile app** for on-the-go tournament management
 
 The ZEF platform is evolving rapidly, and we're just getting started.`,
-    category: "Updates",
+    category: "Esports",
     date: "Jan 28, 2026",
     readTime: "3 min read",
     image: "",
@@ -538,7 +542,7 @@ Who will write their name in history in 2026?
 | LAN Event | March 28-30, 2026 |
 
 Don't miss your shot at glory. Register now and prepare for Winter Wars 2026!`,
-    category: "Tournaments",
+    category: "National",
     date: "Jan 25, 2026",
     readTime: "4 min read",
     image: "",

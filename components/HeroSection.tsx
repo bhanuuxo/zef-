@@ -31,9 +31,9 @@ export default function HeroSection() {
           className="font-heading font-black leading-[1.05] mb-6 hero-title"
           style={{ fontSize: "clamp(2.5rem, 6.5vw, 5rem)" }}
         >
-          <span className="text-white">Designing the Future of</span>
+          <span className="text-white">Global Esports IP. Powering the</span>
           <br />
-          <span className="text-gradient">Competitive Gaming</span>
+          <span className="text-gradient">Next Era of Competitive Gaming</span>
         </motion.h1>
 
         {/* Subtext */}
@@ -71,10 +71,10 @@ export default function HeroSection() {
           className="mt-20 flex flex-wrap items-center justify-center gap-8 md:gap-14"
         >
           {[
-            { val: "3+", label: "IPs OWNED" },
-            { val: "10+", label: "EVENTS" },
-            { val: "₹40K+", label: "PRIZE POOL" },
-            { val: "5+", label: "CITIES" },
+            { val: "2M+", label: "IMPRESSIONS" },
+            { val: "10K+", label: "PLAYERS" },
+            { val: "800+", label: "TEAMS" },
+            { val: "7+", label: "LEAGUE TOURNAMENTS" },
           ].map((s, i) => (
             <div key={i} className="text-center">
               <div className="font-heading font-black text-2xl text-white mb-1">{s.val}</div>

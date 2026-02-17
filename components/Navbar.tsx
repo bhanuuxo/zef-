@@ -62,8 +62,9 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="ZARX Esports Forum"
-              width={36}
-              height={36}
+              width={128}
+              height={128}
+              quality={100}
               className="h-9 w-auto object-contain"
             />
           </Link>

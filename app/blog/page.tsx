@@ -108,12 +108,9 @@ function ShareModal({ post, onClose }: { post: BlogPost; onClose: () => void }) 
 /* ─── Blog Card Component ─── */
 function BlogCard({ post, onShare }: { post: BlogPost; onShare: (post: BlogPost) => void }) {
   const accentMap: Record<string, string> = {
-    News: "#A020F0",
-    Tournaments: "#FF00FF",
-    Industry: "#B44AFF",
-    Guides: "#00F0FF",
-    Interviews: "#FF2D95",
-    Updates: "#FFD700",
+    Global: "#A020F0",
+    National: "#FF00FF",
+    Esports: "#00F0FF",
   };
   const accent = accentMap[post.category] || "#A020F0";
 
@@ -129,8 +126,8 @@ function BlogCard({ post, onShare }: { post: BlogPost; onShare: (post: BlogPost)
       {/* Full card clickable link */}
       <a href={`/blog/${post.id}`} className="absolute inset-0 z-10" aria-label={`Read: ${post.title}`} />
 
-      {/* Image */}
-      <div className="relative h-44 overflow-hidden bg-[#0a0a12] flex items-center justify-center">
+      {/* Image — square (Instagram post ratio) */}
+      <div className="relative aspect-square overflow-hidden bg-[#0a0a12] flex items-center justify-center">
         {post.image ? (
           <Image
             src={post.image}
@@ -223,7 +220,7 @@ function FeaturedPost({ post, onShare }: { post: BlogPost; onShare: (post: BlogP
 
       <div className="flex flex-col lg:flex-row">
         {/* Image */}
-        <div className="relative lg:w-1/2 h-64 lg:h-auto bg-[#0a0a12] overflow-hidden flex items-center justify-center">
+        <div className="relative lg:w-1/2 aspect-square lg:aspect-auto lg:h-auto bg-[#0a0a12] overflow-hidden flex items-center justify-center">
           {post.image ? (
             <Image
               src={post.image}

@@ -48,10 +48,10 @@ function CountdownTimer({ targetDate }: { targetDate: Date }) {
 }
 
 const partners = [
-  { icon: Tv, label: "Official Media Partner", name: "NewsX", logo: "/partners/media partner.png" },
-  { icon: Building2, label: "Brand & Sponsorship Partner", name: "Bien-être Consulting", logo: "/partners/brand & sponsorship partner.png", logoClass: "scale-[2.8]" },
-  { icon: Cpu, label: "Technology Partner", name: "ZARX Technologies Pvt Ltd", logo: "/partners/technology partner.png" },
-  { icon: Shield, label: "Managed by", name: "X Arena", logo: "/partners/managing partner.png" },
+  { icon: Tv, label: "Official Media Partner", name: "NewsX", logo: "/partners/media partner.png", href: "https://share.google/BHr2sk35ghxdQTsoc" },
+  { icon: Building2, label: "Brand & Sponsorship Partner", name: "Bien-être Consulting", logo: "/partners/brand & sponsorship partner.png", logoClass: "scale-[2.8]", href: "https://share.google/3ieguvHtxBmPHUQDJ" },
+  { icon: Cpu, label: "Technology Partner", name: "ZARX Technologies Pvt Ltd", logo: "/partners/technology partner.png", href: "https://share.google/Uaw0FtdYHcqpmMCH1" },
+  { icon: Shield, label: "Managed by", name: "X Arena", logo: "/partners/managing partner.png", href: "#" },
 ];
 
 export default function NXTSection() {
@@ -156,6 +156,12 @@ export default function NXTSection() {
               transition={{ duration: 0.5, delay: 0.5 + i * 0.08 }}
               className="glass-card rounded-sm p-6 text-center group"
             >
+              <a
+                href={partner.href}
+                target={partner.href !== "#" ? "_blank" : undefined}
+                rel={partner.href !== "#" ? "noopener noreferrer" : undefined}
+                className="block"
+              >
               <div className="w-20 h-20 mx-auto mb-3 rounded-sm flex items-center justify-center overflow-hidden border border-[#A020F0]/20 bg-[#A020F0]/[0.03] p-2">
                 {partner.logo ? (
                   <Image
@@ -171,6 +177,7 @@ export default function NXTSection() {
               </div>
               <p className="text-[8px] text-[#6b6b80] font-heading tracking-[0.2em] uppercase mb-1.5">{partner.label}</p>
               <p className="font-heading font-bold text-xs text-white/90 tracking-wider">{partner.name}</p>
+              </a>
             </motion.div>
           ))}
         </motion.div>

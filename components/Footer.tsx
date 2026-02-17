@@ -3,12 +3,12 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
-import { Mail, MapPin, Instagram, Twitter, Youtube, Linkedin, Twitch, ArrowRight, Send, Globe, Gamepad2 } from "lucide-react";
+import { Mail, MapPin, Instagram, Youtube, Linkedin, Twitch, ArrowRight, Send, Globe, Gamepad2 } from "lucide-react";
 import Image from "next/image";
 
 const socialLinks = [
   { name: "Instagram", icon: Instagram, href: "#" },
-  { name: "Twitter", icon: Twitter, href: "#" },
+  { name: "X", icon: () => <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>, href: "#" },
   { name: "YouTube", icon: Youtube, href: "#" },
   { name: "LinkedIn", icon: Linkedin, href: "#" },
   { name: "Twitch", icon: Twitch, href: "#" },
@@ -33,11 +33,9 @@ export default function Footer() {
   return (
     <footer id="contact" className="relative overflow-hidden">
       {/* Contact Section */}
-      <section className="relative py-28 md:py-36">
-
-
+      <section className="relative py-14 md:py-20">
         <div ref={ref} className="relative z-10 max-w-6xl mx-auto px-4 md:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -73,10 +71,10 @@ export default function Footer() {
             className="grid grid-cols-1 lg:grid-cols-2 gap-6"
           >
             {/* Contact Form */}
-            <div className="glass-card hud-corners rounded-sm p-7">
-              <h3 className="font-heading text-lg font-bold mb-5 text-white/90">Send us a message</h3>
-              <form className="space-y-3.5" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <div className="glass-card hud-corners rounded-sm p-5 md:p-7">
+              <h3 className="font-heading text-base font-bold mb-4 text-white/90">Send us a message</h3>
+              <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <input type="text" placeholder="Your Name" className="form-input" />
                   <input type="email" placeholder="Email Address" className="form-input" />
                 </div>
@@ -89,7 +87,7 @@ export default function Footer() {
                   <option value="partner">Partnership Inquiry</option>
                   <option value="other">Other</option>
                 </select>
-                <textarea placeholder="Your Message" rows={4} className="form-input resize-none" />
+                <textarea placeholder="Your Message" rows={3} className="form-input resize-none" />
                 <button type="submit" className="btn-primary w-full flex items-center justify-center gap-2 text-sm py-2.5">
                   <span>Send Message</span>
                   <Send className="w-3.5 h-3.5 relative z-10" />
@@ -98,10 +96,10 @@ export default function Footer() {
             </div>
 
             {/* Contact Info */}
-            <div className="space-y-4">
-              <div className="glass-card rounded-sm p-6">
-                <h3 className="font-heading text-sm font-bold mb-4 text-white/85">Contact Information</h3>
-                <div className="space-y-3.5">
+            <div className="space-y-3">
+              <div className="glass-card rounded-sm p-4 md:p-6">
+                <h3 className="font-heading text-sm font-bold mb-3 text-white/85">Contact Information</h3>
+                <div className="space-y-3">
                   {[
                     { icon: Mail, label: "EMAIL", value: "info@zefglobal.com", accent: "#A020F0" },
                     { icon: Globe, label: "WEB", value: "zarxtechnologies.com", accent: "#FF00FF" },
@@ -159,11 +157,11 @@ export default function Footer() {
 
       {/* Footer Bottom */}
       <div className="relative glass">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 py-14">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-10">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {/* Brand */}
-            <div className="lg:col-span-2">
-              <Link href="/" className="flex items-center mb-5 group">
+            <div className="col-span-2 lg:col-span-2">
+              <Link href="/" className="flex items-center mb-3 group">
                 <Image
                   src="/logo.png"
                   alt="ZARX Esports Forum"
@@ -172,11 +170,11 @@ export default function Footer() {
                   className="h-9 w-auto object-contain"
                 />
               </Link>
-              <p className="text-[11px] text-[#555568] leading-relaxed max-w-sm mb-5">
+              <p className="text-[11px] text-[#555568] leading-relaxed max-w-sm mb-3">
                 ZARX Esports Forum is a global competitive gaming IP curator building structured esports ecosystems across titles and territories.
               </p>
               <p className="text-[10px] text-[#333345]">&copy; {new Date().getFullYear()} ZARX Esports Forum. All rights reserved.</p>
-              <div className="flex gap-4 mt-2">
+              <div className="flex gap-4 mt-1.5">
                 <Link href="/terms" className="text-[10px] text-[#444458] hover:text-[#A020F0] transition-colors">Terms &amp; Conditions</Link>
                 <Link href="/privacy" className="text-[10px] text-[#444458] hover:text-[#A020F0] transition-colors">Privacy Policy</Link>
               </div>
@@ -185,8 +183,8 @@ export default function Footer() {
             {/* Links */}
             {footerLinks.map((section) => (
               <div key={section.title}>
-                <h4 className="font-heading text-[10px] font-bold tracking-[0.2em] mb-3.5 text-[#8a8a9a] uppercase">{section.title}</h4>
-                <ul className="space-y-2">
+                <h4 className="font-heading text-[10px] font-bold tracking-[0.2em] mb-2.5 text-[#8a8a9a] uppercase">{section.title}</h4>
+                <ul className="space-y-1.5">
                   {section.links.map((link) => (
                     <li key={link.name}>
                       {link.href.startsWith("/") ? (

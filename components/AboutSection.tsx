@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { User, Linkedin, Twitter } from "lucide-react";
+import { User, Linkedin, Instagram } from "lucide-react";
 import Image from "next/image";
 
 const team = [
@@ -104,11 +104,12 @@ export default function AboutSection() {
                 Visionary entrepreneur pioneering India&apos;s competitive gaming infrastructure. Under his leadership, ZEF has grown from a single tournament into a multi-IP esports ecosystem spanning cities and titles nationwide.
               </p>
               <div className="flex gap-2.5 justify-center md:justify-start">
-                {[Linkedin, Twitter].map((Icon, idx) => (
-                  <a key={idx} href="#" className="w-8 h-8 rounded-sm border border-[#A020F0]/20 flex items-center justify-center hover:bg-[#A020F0]/10 hover:border-[#A020F0]/40 transition-all">
-                    <Icon className="w-3.5 h-3.5 text-[#6b6b80]" />
+                <a href="https://www.linkedin.com/in/aniket-singh-53a401230?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-sm border border-[#A020F0]/20 flex items-center justify-center hover:bg-[#A020F0]/10 hover:border-[#A020F0]/40 transition-all text-[#6b6b80]">
+                    <Linkedin className="w-3.5 h-3.5" />
                   </a>
-                ))}
+                  <a href="https://www.instagram.com/gamer.zarx?igsh=bzBpODM3YjhoOWsz" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-sm border border-[#A020F0]/20 flex items-center justify-center hover:bg-[#A020F0]/10 hover:border-[#A020F0]/40 transition-all text-[#6b6b80]">
+                    <Instagram className="w-3.5 h-3.5" />
+                  </a>
               </div>
             </div>
           </div>

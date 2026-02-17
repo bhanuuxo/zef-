@@ -247,7 +247,7 @@ export default function PrivacyPolicy() {
               <ul className="list-disc pl-6 space-y-2 mt-3">
                 <li>Game publisher platforms (Riot Games, Supercell, Krafton, Garena, The Pokémon Company);</li>
                 <li>Streaming and content platforms (YouTube, Twitch);</li>
-                <li>Social media platforms (Instagram, Twitter/X, Discord, LinkedIn);</li>
+                <li>Social media platforms (Instagram, X, Discord, LinkedIn);</li>
                 <li>Payment processors and financial services;</li>
                 <li>Cloud hosting and infrastructure providers;</li>
                 <li>Email and communication service providers;</li>

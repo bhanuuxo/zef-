@@ -57,7 +57,7 @@ export default function HomePage() {
       <div className="relative z-[1]">
         <Navbar />
         <HeroSection />
-        <LEDTicker />
+        {/* <LEDTicker /> — hidden pending game logo approval */}
         {/* Backdrop overlay from ticker to footer — dims the shader background */}
         <div className="relative">
           <div className="absolute inset-0 bg-[#050508]/60 pointer-events-none" />

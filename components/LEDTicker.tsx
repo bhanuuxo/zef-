@@ -16,23 +16,15 @@ const games = [
 
 function LogoItem({ name, logo }: { name: string; logo: string }) {
   return (
-    <div className="flex-shrink-0 flex items-center gap-4 mx-6 md:mx-10 group cursor-default select-none">
-      {/* Game Logo */}
+    <div className="flex-shrink-0 flex items-center justify-center mx-8 md:mx-12 group cursor-default select-none">
       <Image
         src={logo}
         alt={name}
-        width={36}
-        height={36}
-        className="w-9 h-9 md:w-10 md:h-10 object-contain flex-shrink-0 group-hover:scale-110 transition-transform duration-500"
+        width={52}
+        height={52}
+        className="w-12 h-12 md:w-14 md:h-14 object-contain flex-shrink-0 group-hover:scale-110 transition-transform duration-500"
         draggable={false}
       />
-      <span
-        className="text-[11px] md:text-xs font-heading font-bold tracking-[0.18em] uppercase text-[#555568] group-hover:text-[#A020F0]/80 transition-all duration-500 whitespace-nowrap"
-      >
-        {name}
-      </span>
-      {/* Separator dot */}
-      <div className="w-1 h-1 rounded-full bg-[#A020F0]/20 group-hover:bg-[#FF00FF]/40 transition-colors ml-2" />
     </div>
   );
 }

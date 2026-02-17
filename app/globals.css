@@ -295,17 +295,7 @@ body {
   border-top: none;
   border-bottom: none;
 }
-.led-ticker-wrap::before,
-.led-ticker-wrap::after {
-  content: '';
-  position: absolute;
-  top: 0; bottom: 0;
-  width: 140px;
-  z-index: 5;
-  pointer-events: none;
-}
-.led-ticker-wrap::before { left: 0; background: linear-gradient(90deg, var(--black), transparent); }
-.led-ticker-wrap::after { right: 0; background: linear-gradient(270deg, var(--black), transparent); }
+/* gradient edges removed */
 
 .led-ticker-track {
   display: flex;

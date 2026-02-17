@@ -6,10 +6,10 @@ import { Tv, Building2, Cpu, Shield } from "lucide-react";
 import Image from "next/image";
 
 const partners = [
-  { name: "NewsX", type: "Media Partner", icon: Tv, description: "Official media partner providing broadcast coverage and content distribution.", accent: "#A020F0", logo: "/partners/media partner.png" },
-  { name: "Bien-être Consulting", type: "Brand & Sponsorship Partner", icon: Building2, description: "Strategic brand partnerships and sponsorship management.", accent: "#FF00FF", logo: "/partners/brand & sponsorship partner.png", logoClass: "scale-[2.8] object-contain" },
-  { name: "ZARX Technologies Pvt Ltd", type: "Technology Partner", icon: Cpu, description: "Platform technology, infrastructure, and digital solutions.", accent: "#B44AFF", logo: "/partners/technology partner.png" },
-  { name: "X Arena", type: "Managing Partner", icon: Shield, description: "Event management, venue operations, and execution.", accent: "#FF2D95", logo: "/partners/managing partner.png" },
+  { name: "NewsX", type: "Media Partner", icon: Tv, description: "Official media partner providing broadcast coverage and content distribution.", accent: "#A020F0", logo: "/partners/media partner.png", href: "https://share.google/BHr2sk35ghxdQTsoc" },
+  { name: "Bien-être Consulting", type: "Brand & Sponsorship Partner", icon: Building2, description: "Strategic brand partnerships and sponsorship management.", accent: "#FF00FF", logo: "/partners/brand & sponsorship partner.png", logoClass: "scale-[2.8] object-contain", href: "https://share.google/3ieguvHtxBmPHUQDJ" },
+  { name: "ZARX Technologies Pvt Ltd", type: "Technology Partner", icon: Cpu, description: "Platform technology, infrastructure, and digital solutions.", accent: "#B44AFF", logo: "/partners/technology partner.png", href: "https://share.google/Uaw0FtdYHcqpmMCH1" },
+  { name: "X Arena", type: "Managing Partner", icon: Shield, description: "Event management, venue operations, and execution.", accent: "#FF2D95", logo: "/partners/managing partner.png", href: "#" },
 ];
 
 export default function PartnersSection() {
@@ -67,7 +67,11 @@ export default function PartnersSection() {
               transition={{ duration: 0.6, delay: 0.2 + i * 0.08 }}
               className="group"
             >
-              <div className="glass-card hud-corners rounded-sm p-6 h-full text-center relative overflow-hidden">
+              <a
+                href={partner.href}
+                target={partner.href !== "#" ? "_blank" : undefined}
+                rel={partner.href !== "#" ? "noopener noreferrer" : undefined}
+                className="glass-card hud-corners rounded-sm p-6 h-full text-center relative overflow-hidden block cursor-pointer">
                 <div className="absolute  right-0 h-[1px]" style={{ background: `linear-gradient(90deg, transparent, ${partner.accent}30, transparent)` }} />
 
                 <div
@@ -99,7 +103,7 @@ export default function PartnersSection() {
                   {partner.name}
                 </h3>
                 <p className="text-[10px] text-[#6b6b80] leading-relaxed">{partner.description}</p>
-              </div>
+              </a>
             </motion.div>
           ))}
         </div>

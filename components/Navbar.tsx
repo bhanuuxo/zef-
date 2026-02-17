@@ -11,6 +11,7 @@ const navLinks = [
   { name: "About", href: "/about" },
   { name: "Our IPs", href: "/ips" },
   { name: "NSL 2026", href: "/nsl2026" },
+  { name: "Blog", href: "/blog" },
   { name: "Careers", href: "/careers" },
   { name: "Gallery", href: "/gallery" },
 ];

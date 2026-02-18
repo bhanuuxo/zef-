@@ -839,11 +839,14 @@ video {
 .aspect-\[4\/3\]{
   aspect-ratio: 4/3;
 }
+.aspect-square{
+  aspect-ratio: 1 / 1;
+}
 .aspect-video{
   aspect-ratio: 16 / 9;
 }
-.aspect-square{
-  aspect-ratio: 1 / 1;
+.aspect-\[4\/5\]{
+  aspect-ratio: 4/5;
 }
 .h-1{
   height: 0.25rem;
@@ -908,9 +911,6 @@ video {
 .h-60{
   height: 15rem;
 }
-.h-64{
-  height: 16rem;
-}
 .h-7{
   height: 1.75rem;
 }
@@ -940,6 +940,9 @@ video {
 }
 .h-full{
   height: 100%;
+}
+.max-h-\[500px\]{
+  max-height: 500px;
 }
 .min-h-\[60vh\]{
   min-height: 60vh;
@@ -992,6 +995,9 @@ video {
 .w-40{
   width: 10rem;
 }
+.w-44{
+  width: 11rem;
+}
 .w-48{
   width: 12rem;
 }
@@ -1036,9 +1042,6 @@ video {
 }
 .w-px{
   width: 1px;
-}
-.w-44{
-  width: 11rem;
 }
 .min-w-0{
   min-width: 0px;
@@ -1376,6 +1379,10 @@ video {
 .bg-transparent{
   background-color: transparent;
 }
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
 .bg-white\/10{
   background-color: rgb(255 255 255 / 0.1);
 }
@@ -1387,10 +1394,6 @@ video {
 }
 .bg-white\/\[0\.04\]{
   background-color: rgb(255 255 255 / 0.04);
-}
-.bg-white{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 .bg-gradient-radial{
   background-image: radial-gradient(var(--tw-gradient-stops));
@@ -1430,11 +1433,6 @@ video {
 .from-\[\#FF00FF\]\/\[0\.04\]{
   --tw-gradient-from: rgb(255 0 255 / 0.04) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(255 0 255 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-.from-black\/20{
-  --tw-gradient-from: rgb(0 0 0 / 0.2) var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 .from-black\/80{
@@ -1814,9 +1812,6 @@ video {
 }
 .text-\[\#A020F0\]\/40{
   color: rgb(160 32 240 / 0.4);
-}
-.text-\[\#A020F0\]\/50{
-  color: rgb(160 32 240 / 0.5);
 }
 .text-\[\#A020F0\]\/60{
   color: rgb(160 32 240 / 0.6);
@@ -2805,6 +2800,10 @@ select.form-input option { background: var(--surface); color: #e0e0e0; }
 
   .lg\:h-auto{
     height: auto;
+  }
+
+  .lg\:min-h-\[480px\]{
+    min-height: 480px;
   }
 
   .lg\:w-1\/2{

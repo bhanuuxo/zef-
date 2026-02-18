@@ -308,14 +308,14 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
             {/* Hero Image */}
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.15 }}
-              className="relative h-56 md:h-72 glass-card rounded-sm overflow-hidden mb-10 bg-[#0a0a12] flex items-center justify-center"
+              className="relative aspect-[4/5] max-h-[500px] glass-card rounded-sm overflow-hidden mb-10 bg-[#0a0a12] flex items-center justify-center"
             >
               {post.image ? (
                 <Image
                   src={post.image}
                   alt={post.title}
                   fill
-                  className="object-contain p-8"
+                  className="object-cover"
                   priority
                 />
               ) : (
@@ -387,9 +387,9 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {relatedPosts.map((rp) => (
                     <Link key={rp.id} href={`/blog/${rp.id}`} className="glass-card rounded-sm overflow-hidden group">
-                      <div className="relative h-28 bg-[#0a0a12] flex items-center justify-center">
+                      <div className="relative aspect-[4/5] bg-[#0a0a12] flex items-center justify-center">
                         {rp.image ? (
-                          <Image src={rp.image} alt={rp.title} fill className="object-contain p-4 group-hover:scale-105 transition-transform duration-500" />
+                          <Image src={rp.image} alt={rp.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                         ) : (
                           <Gamepad2 className="w-10 h-10 text-[#A020F0]/20" />
                         )}

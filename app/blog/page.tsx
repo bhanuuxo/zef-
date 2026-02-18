@@ -126,14 +126,14 @@ function BlogCard({ post, onShare }: { post: BlogPost; onShare: (post: BlogPost)
       {/* Full card clickable link */}
       <a href={`/blog/${post.id}`} className="absolute inset-0 z-10" aria-label={`Read: ${post.title}`} />
 
-      {/* Image — square (Instagram post ratio) */}
-      <div className="relative aspect-square overflow-hidden bg-[#0a0a12] flex items-center justify-center">
+      {/* Image — portrait (Instagram post 4:5 ratio) */}
+      <div className="relative aspect-[4/5] overflow-hidden bg-[#0a0a12] flex items-center justify-center">
         {post.image ? (
           <Image
             src={post.image}
             alt={post.title}
             fill
-            className="object-contain p-6 group-hover:scale-105 transition-transform duration-700"
+            className="object-cover group-hover:scale-105 transition-transform duration-700"
           />
         ) : (
           <Gamepad2 className="w-12 h-12 text-[#A020F0]/20" />
@@ -220,13 +220,13 @@ function FeaturedPost({ post, onShare }: { post: BlogPost; onShare: (post: BlogP
 
       <div className="flex flex-col lg:flex-row">
         {/* Image */}
-        <div className="relative lg:w-1/2 aspect-square lg:aspect-auto lg:h-auto bg-[#0a0a12] overflow-hidden flex items-center justify-center">
+        <div className="relative lg:w-1/2 aspect-[4/5] lg:aspect-auto lg:min-h-[480px] bg-[#0a0a12] overflow-hidden flex items-center justify-center">
           {post.image ? (
             <Image
               src={post.image}
               alt={post.title}
               fill
-              className="object-contain p-10 group-hover:scale-105 transition-transform duration-700"
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
             />
           ) : (
             <Gamepad2 className="w-16 h-16 text-[#A020F0]/20" />

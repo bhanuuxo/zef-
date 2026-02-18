@@ -85,10 +85,9 @@ export default function AboutSection() {
                 />
               </div>
               <div className="absolute -inset-1.5 rounded-sm border border-[#A020F0]/20 -z-10" />
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute -inset-3 rounded-sm border border-[#A020F0]/10 -z-20"
+              <div
+                className="absolute -inset-3 rounded-sm border border-[#A020F0]/10 -z-20 animate-spin-slow"
+                style={{ animationDuration: '20s' }}
               />
             </div>
 

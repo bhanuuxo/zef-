@@ -24,8 +24,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        heading: ["Orbitron", "monospace"],
-        body: ["Rajdhani", "sans-serif"],
+        heading: ["'Space Grotesk'", "sans-serif"],
+        body: ["'Space Grotesk'", "sans-serif"],
         mono: ["'Share Tech Mono'", "monospace"],
       },
       animation: {

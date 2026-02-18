@@ -34,7 +34,7 @@ export default function Navbar() {
         transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "py-2.5 bg-[#050508]/85 backdrop-blur-xl border-b border-white/[0.04]"
+            ? "py-2.5 bg-[#050508]/90 backdrop-blur-md border-b border-white/[0.04]"
             : "py-5 bg-transparent"
         }`}
       >
@@ -107,7 +107,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-40 md:hidden bg-[#050508]/98 backdrop-blur-xl"
+            className="fixed inset-0 z-40 md:hidden bg-[#050508]/98 backdrop-blur-md"
           >
             <div className="flex flex-col items-center justify-center h-full gap-6">
               {navLinks.map((link, i) => (

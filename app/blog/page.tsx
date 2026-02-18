@@ -120,11 +120,22 @@ function BlogCard({ post, onShare }: { post: BlogPost; onShare: (post: BlogPost)
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5 }}
-      className="glass-card rounded-sm overflow-hidden group flex flex-col h-full relative"
+      className="glass-card rounded-sm overflow-hidden group flex flex-col h-full relative cursor-pointer"
       id={`post-${post.id}`}
+      tabIndex={0}
+      role="button"
+      onClick={(e) => {
+        // Don't navigate if Share button was clicked
+        if ((e.target as HTMLElement).closest("button[data-share]") == null) {
+          window.location.href = `/blog/${post.id}`;
+        }
+      }}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          window.location.href = `/blog/${post.id}`;
+        }
+      }}
     >
-      {/* Full card clickable link */}
-      <a href={`/blog/${post.id}`} className="absolute inset-0 z-10" aria-label={`Read: ${post.title}`} />
 
       {/* Image — portrait (Instagram post 4:5 ratio) */}
       <div className="relative aspect-[4/5] overflow-hidden bg-[#0a0a12] flex items-center justify-center">
@@ -187,6 +198,7 @@ function BlogCard({ post, onShare }: { post: BlogPost; onShare: (post: BlogPost)
           </span>
           <div className="flex items-center gap-2">
             <button
+              data-share
               onClick={(e) => { e.preventDefault(); e.stopPropagation(); onShare(post); }}
               className="relative z-20 flex items-center gap-1 text-[9px] text-[#555568] hover:text-[#A020F0] transition-colors font-heading tracking-wider"
             >

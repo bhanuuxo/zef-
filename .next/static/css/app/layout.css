@@ -1,7 +1,7 @@
 /*!*************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./app/globals.css ***!
   \*************************************************************************************************************************************************************************************************************************************************************/
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
@@ -839,14 +839,11 @@ video {
 .aspect-\[4\/3\]{
   aspect-ratio: 4/3;
 }
-.aspect-square{
-  aspect-ratio: 1 / 1;
+.aspect-\[4\/5\]{
+  aspect-ratio: 4/5;
 }
 .aspect-video{
   aspect-ratio: 16 / 9;
-}
-.aspect-\[4\/5\]{
-  aspect-ratio: 4/5;
 }
 .h-1{
   height: 0.25rem;
@@ -904,9 +901,6 @@ video {
 }
 .h-5{
   height: 1.25rem;
-}
-.h-56{
-  height: 14rem;
 }
 .h-60{
   height: 15rem;
@@ -1117,6 +1111,15 @@ video {
 .animate-ticker-fast{
   animation: ticker 10s linear infinite;
 }
+@keyframes spin{
+
+  to{
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow{
+  animation: spin 25s linear infinite;
+}
 .cursor-default{
   cursor: default;
 }
@@ -1320,9 +1323,6 @@ video {
 .bg-\[\#050508\]\/60{
   background-color: rgb(5 5 8 / 0.6);
 }
-.bg-\[\#050508\]\/85{
-  background-color: rgb(5 5 8 / 0.85);
-}
 .bg-\[\#050508\]\/90{
   background-color: rgb(5 5 8 / 0.9);
 }
@@ -1476,9 +1476,6 @@ video {
 .object-top{
   -o-object-position: top;
      object-position: top;
-}
-.p-10{
-  padding: 2.5rem;
 }
 .p-2{
   padding: 0.5rem;
@@ -1935,10 +1932,6 @@ video {
   --tw-backdrop-blur: blur(4px);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
-.backdrop-blur-xl{
-  --tw-backdrop-blur: blur(24px);
-  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
 .transition{
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -2000,19 +1993,23 @@ video {
   }
 /* Glass surfaces */
 .glass {
-    background: rgba(8,8,15,0.7);
-    backdrop-filter: blur(24px) saturate(1.4);
-    -webkit-backdrop-filter: blur(24px) saturate(1.4);
+    background: rgba(8,8,15,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(160,32,240,0.12);
+    will-change: transform;
+    transform: translateZ(0);
   }
 .glass-card {
-    background: linear-gradient(145deg, rgba(12,12,22,0.9) 0%, rgba(18,18,32,0.75) 100%);
-    backdrop-filter: blur(20px) saturate(1.2);
-    -webkit-backdrop-filter: blur(20px) saturate(1.2);
+    background: linear-gradient(145deg, rgba(12,12,22,0.95) 0%, rgba(18,18,32,0.85) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(160,32,240,0.12);
     position: relative;
     overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+    will-change: transform;
+    transform: translateZ(0);
   }
 .glass-card::before {
     content: '';
@@ -2033,10 +2030,8 @@ video {
   }
 .glass-card:hover {
     border-color: rgba(160,32,240,0.25);
-    box-shadow:
-      0 0 20px rgba(160,32,240,0.08),
-      0 8px 30px rgba(0,0,0,0.25);
-    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transform: translateY(-3px) translateZ(0);
   }
 /* Glow border */
 .glow-border {
@@ -2080,13 +2075,8 @@ video {
     position: relative;
   }
 .noise::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    opacity: 0.02;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 1;
+    /* Noise overlay disabled for GPU perf — virtually invisible at 0.02 opacity */
+    display: none;
   }
 /* HUD Corners */
 .hud-corners {
@@ -2127,7 +2117,7 @@ html {
 body {
   background: var(--black);
   color: #d4d4e0;
-  font-family: 'Rajdhani', 'Inter', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   overflow-x: hidden;
   overscroll-behavior: none;
   -webkit-font-smoothing: antialiased;
@@ -2151,7 +2141,7 @@ body {
   justify-content: center;
   gap: 0.5rem;
   padding: 0.9rem 2.2rem;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
   font-size: 0.7rem;
   letter-spacing: 0.18em;
@@ -2162,8 +2152,10 @@ body {
   border-radius: 2px;
   cursor: pointer;
   overflow: hidden;
-  transition: all 0.45s cubic-bezier(0.4,0,0.2,1);
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), box-shadow 0.35s ease;
   text-decoration: none;
+  will-change: transform;
+  transform: translateZ(0);
 }
 .btn-primary::before {
   content: '';
@@ -2182,8 +2174,8 @@ body {
   transition: left 0.6s;
 }
 .btn-primary:hover {
-  box-shadow: 0 0 20px rgba(160,32,240,0.3), 0 4px 16px rgba(0,0,0,0.3);
-  transform: translateY(-1px);
+  box-shadow: 0 0 12px rgba(160,32,240,0.25);
+  transform: translateY(-1px) translateZ(0);
 }
 .btn-primary:hover::before { opacity: 1; }
 .btn-primary:hover::after { left: 120%; }
@@ -2196,7 +2188,7 @@ body {
   justify-content: center;
   gap: 0.5rem;
   padding: 0.9rem 2.2rem;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
   font-size: 0.7rem;
   letter-spacing: 0.18em;
@@ -2206,8 +2198,10 @@ body {
   border: 1px solid rgba(160,32,240,0.35);
   border-radius: 2px;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), border-color 0.35s ease, box-shadow 0.35s ease;
   text-decoration: none;
+  will-change: transform;
+  transform: translateZ(0);
 }
 .btn-outline:hover {
   border-color: var(--violet);
@@ -2257,7 +2251,7 @@ body {
 .form-input {
   width: 100%;
   padding: 0.875rem 1rem;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 0.95rem;
   color: #e0e0e0;
   background: rgba(12,12,22,0.8);
@@ -2280,14 +2274,16 @@ select.form-input option { background: var(--surface); color: #e0e0e0; }
    COUNTDOWN
    ========================================================= */
 .countdown-digit {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 800;
   font-size: clamp(2rem, 5vw, 3.5rem);
   background: linear-gradient(180deg, #fff 0%, var(--lavender) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 14px rgba(160,32,240,0.7));
+  filter: drop-shadow(0 0 8px rgba(160,32,240,0.5));
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 /* =========================================================
@@ -2297,10 +2293,12 @@ select.form-input option { background: var(--surface); color: #e0e0e0; }
   width: 14px; height: 14px;
   border-radius: 50%;
   background: var(--violet);
-  box-shadow: 0 0 12px var(--violet), 0 0 28px rgba(255,0,255,0.35);
+  box-shadow: 0 0 10px var(--violet);
   position: relative;
   flex-shrink: 0;
   z-index: 2;
+  will-change: transform;
+  transform: translateZ(0);
 }
 .timeline-node::after {
   content: '';
@@ -2330,7 +2328,9 @@ select.form-input option { background: var(--surface); color: #e0e0e0; }
   overflow: hidden;
   border-radius: 4px;
   border: 1px solid rgba(160,32,240,0.1);
-  transition: all 0.5s cubic-bezier(0.4,0,0.2,1);
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), border-color 0.4s ease, box-shadow 0.4s ease;
+  will-change: transform;
+  transform: translateZ(0);
 }
 .gallery-item::before {
   content: '';
@@ -2343,8 +2343,8 @@ select.form-input option { background: var(--surface); color: #e0e0e0; }
 }
 .gallery-item:hover {
   border-color: rgba(160,32,240,0.4);
-  box-shadow: 0 0 30px rgba(160,32,240,0.12), 0 8px 32px rgba(0,0,0,0.4);
-  transform: scale(1.04);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+  transform: scale(1.03) translateZ(0);
 }
 .gallery-item:hover::before { opacity: 1; }
 
@@ -2360,8 +2360,8 @@ select.form-input option { background: var(--surface); color: #e0e0e0; }
   50% { transform: translateY(-25px) rotate(3deg); }
 }
 @keyframes pulse-glow {
-  0%,100% { box-shadow: 0 0 20px var(--violet), 0 0 40px rgba(255,0,255,0.2); }
-  50% { box-shadow: 0 0 40px var(--violet), 0 0 80px rgba(255,0,255,0.35), 0 0 120px rgba(160,32,240,0.12); }
+  0%,100% { box-shadow: 0 0 15px var(--violet); }
+  50% { box-shadow: 0 0 30px var(--violet), 0 0 50px rgba(255,0,255,0.2); }
 }
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(50px); }
@@ -2642,10 +2642,6 @@ select.form-input option { background: var(--surface); color: #e0e0e0; }
     height: 11rem;
   }
 
-  .md\:h-72{
-    height: 18rem;
-  }
-
   .md\:w-14{
     width: 3.5rem;
   }
@@ -2702,6 +2698,14 @@ select.form-input option { background: var(--surface); color: #e0e0e0; }
     padding: 1.75rem;
   }
 
+  .md\:p-4{
+    padding: 1rem;
+  }
+
+  .md\:p-5{
+    padding: 1.25rem;
+  }
+
   .md\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
@@ -2735,6 +2739,11 @@ select.form-input option { background: var(--surface); color: #e0e0e0; }
   .md\:py-5{
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+  }
+
+  .md\:py-12{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .md\:text-left{
@@ -2796,10 +2805,6 @@ select.form-input option { background: var(--surface); color: #e0e0e0; }
 
   .lg\:aspect-auto{
     aspect-ratio: auto;
-  }
-
-  .lg\:h-auto{
-    height: auto;
   }
 
   .lg\:min-h-\[480px\]{

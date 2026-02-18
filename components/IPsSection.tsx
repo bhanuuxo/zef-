@@ -87,11 +87,10 @@ function IPCard({ ip, index }: { ip: (typeof ips)[0]; index: number }) {
         {/* Icon area */}
         <div className="relative px-6 pt-4 pb-0">
           <div className="relative z-10">
-            <motion.div
-              animate={{ rotate: [0, 360] }}
-              transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-              className="w-16 h-16 rounded-sm flex items-center justify-center mb-5 border"
+            <div
+              className="w-16 h-16 rounded-sm flex items-center justify-center mb-5 border animate-spin-slow"
               style={{
+                animationDuration: '30s',
                 background: `${ip.accent}08`,
                 borderColor: `${ip.accent}25`,
                 boxShadow: `0 0 35px ${ip.accent}15`,
@@ -100,7 +99,7 @@ function IPCard({ ip, index }: { ip: (typeof ips)[0]; index: number }) {
               <span className="font-heading text-2xl font-black" style={{ color: ip.accent }}>
                 {ip.title.charAt(0)}
               </span>
-            </motion.div>
+            </div>
           </div>
 
           <div

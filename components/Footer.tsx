@@ -18,7 +18,7 @@ const socialLinks = [
 const footerLinks = [
   { title: "Explore", links: [{ name: "Home", href: "/" }, { name: "About Us", href: "/about" }, { name: "Our IPs", href: "/ips" }, { name: "Timeline", href: "#timeline" }, { name: "Media Gallery", href: "/gallery" }] },
   { title: "IP", links: [{ name: "NXT in Gaming 2026", href: "#nxt" }, { name: "NSL 2026", href: "/nsl2026" }, { name: "GSL 2026", href: "/ips" }, { name: "Champions League", href: "#timeline" }, { name: "Winter Wars", href: "#timeline" }] },
-  { title: "Connect", links: [{ name: "Careers", href: "/careers" }, { name: "Partner With Us", href: "#partners" }, { name: "Invest", href: "#invest" }, { name: "Media Inquiries", href: "#contact" }, { name: "Sponsor Inquiry", href: "#contact" }] },
+  { title: "Connect", links: [{ name: "Careers", href: "/careers" }, { name: "Partner With Us", href: "#partners" }, { name: "Invest", href: "#invest" }, { name: "Investment Inquiries", href: "mailto:partnerships@zefglobal.com" }, { name: "Sponsor Inquiry", href: "mailto:partnerships@zefglobal.com" }] },
 ];
 
 const tickerLogos = [
@@ -34,9 +34,9 @@ export default function Footer() {
   return (
     <footer id="contact" className="relative overflow-hidden">
       {/* Contact Section */}
-      <section className="relative py-14 md:py-20">
+      <section className="relative py-8 md:py-12">
         <div ref={ref} className="relative z-10 max-w-6xl mx-auto px-4 md:px-8">
-          <div className="text-center mb-10">
+          <div className="text-center mb-6">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -69,10 +69,10 @@ export default function Footer() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-4"
           >
             {/* Contact Form */}
-            <div className="glass-card hud-corners rounded-sm p-5 md:p-7">
+            <div className="glass-card hud-corners rounded-sm p-4 md:p-5">
               <h3 className="font-heading text-base font-bold mb-4 text-white/90">Send us a message</h3>
               <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -98,7 +98,7 @@ export default function Footer() {
 
             {/* Contact Info */}
             <div className="space-y-3">
-              <div className="glass-card rounded-sm p-4 md:p-6">
+              <div className="glass-card rounded-sm p-3 md:p-4">
                 <h3 className="font-heading text-sm font-bold mb-3 text-white/85">Contact Information</h3>
                 <div className="space-y-3">
                   {[
@@ -119,18 +119,18 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-3.5">
-                <a href="mailto:sponsors@zarxesports.com" className="glass-card rounded-sm p-4 text-center hover:border-[#A020F0]/30 transition-all group">
+              <div className="grid grid-cols-2 gap-2">
+                <a href="mailto:partnerships@zefglobal.com" className="glass-card rounded-sm p-4 text-center hover:border-[#A020F0]/30 transition-all group">
                   <Gamepad2 className="w-5 h-5 mx-auto mb-1.5 text-[#A020F0] group-hover:text-[#B44AFF]" />
                   <span className="text-[10px] font-heading font-bold tracking-[0.1em] text-[#8a8a9a]">Sponsor Inquiry</span>
                 </a>
-                <a href="mailto:media@zarxesports.com" className="glass-card rounded-sm p-4 text-center hover:border-[#FF00FF]/30 transition-all group">
+                <a href="mailto:partnerships@zefglobal.com" className="glass-card rounded-sm p-4 text-center hover:border-[#FF00FF]/30 transition-all group">
                   <Globe className="w-5 h-5 mx-auto mb-1.5 text-[#FF00FF] group-hover:text-[#FF2D95]" />
-                  <span className="text-[10px] font-heading font-bold tracking-[0.1em] text-[#8a8a9a]">Media Inquiry</span>
+                  <span className="text-[10px] font-heading font-bold tracking-[0.1em] text-[#8a8a9a]">Investment Inquiry</span>
                 </a>
               </div>
 
-              <div className="glass-card rounded-sm p-5">
+              <div className="glass-card rounded-sm p-3">
                 <h4 className="text-[8px] font-heading tracking-[0.2em] text-[#555568] mb-3 uppercase">Follow Us</h4>
                 <div className="flex gap-2">
                   {socialLinks.map((social) => (

@@ -97,13 +97,13 @@ export default function PartnersSection() {
                   )}
                 </div>
 
-                <span className="text-[8px] font-heading tracking-[0.2em] uppercase block mb-2" style={{ color: `${partner.accent}99` }}>
+                <span className="text-[8px] font-heading tracking-[0.2em] uppercase block mb-2" style={{ color: `${partner.accent}60` }}>
                   {partner.type}
                 </span>
                 <h3 className="font-heading text-sm font-bold mb-2.5 text-white/90 group-hover:text-white transition-colors">
                   {partner.name}
                 </h3>
-                <p className="text-[10px] text-[#6b6b80] leading-relaxed">{partner.description}</p>
+                <p className="text-[10px] text-[#6b6b80] leading-relaxed font-bold">{partner.description}</p>
               </a>
             </motion.div>
           ))}

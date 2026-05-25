@@ -76,7 +76,7 @@ export default function NXTSection() {
           className="text-center font-heading font-black mb-5"
           style={{ fontSize: "clamp(2rem, 5vw, 4.5rem)" }}
         >
-          <span className="text-gradient">NXT in Gaming</span>{" "}
+          <span className="text-gradient">ZEF Champions League</span>{" "}
           <span className="glow-text">2026</span>
         </motion.h2>
 
@@ -89,12 +89,12 @@ export default function NXTSection() {
         >
           <div className="flex items-center gap-2">
             <Calendar className="w-3.5 h-3.5 text-[#A020F0]" />
-            <span className="text-[11px] font-heading tracking-[0.1em]">12th March 2026</span>
+            <span className="text-[11px] font-heading tracking-[0.1em]">19th July 2026</span>
           </div>
           <div className="w-[1px] h-3 bg-[#A020F0]/20 hidden md:block" />
           <div className="flex items-center gap-2">
             <MapPin className="w-3.5 h-3.5 text-[#FF00FF]" />
-            <span className="text-[11px] font-heading tracking-[0.1em]">Bharat Mandapam, New Delhi</span>
+            <span className="text-[11px] font-heading tracking-[0.1em]">India</span>
           </div>
         </motion.div>
 
@@ -105,7 +105,7 @@ export default function NXTSection() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mb-20"
         >
-          <CountdownTimer targetDate={new Date("2026-03-12T10:00:00")} />
+          <CountdownTimer targetDate={new Date("2026-07-19T10:00:00")} />
         </motion.div>
 
         {/* NXT Badge */}
@@ -119,19 +119,19 @@ export default function NXTSection() {
             className="relative"
           >
             <div className="glass-card rounded-sm px-12 py-10 text-center max-w-md">
-              <div className="w-44 h-44 mx-auto mb-5 rounded-sm flex items-center justify-center relative overflow-hidden bg-white p-3">
+              <div className="w-40 h-50 mx-auto mb-5 rounded-sm flex items-center justify-center relative overflow-hidden bg-white p-0.5">
                 <Image
-                  src="/NXT 2026/NextinGaming.png"
-                  alt="NXT in Gaming 2026"
+                  src="/ZEF-Champions-League-2026.png.png"
+                  alt="ZEF Champions League 2026"
                   width={512}
-                  height={512}
+                  height={640}
                   quality={100}
                   className="w-full h-full object-contain relative z-10"
                 />
               </div>
-              <h3 className="font-heading text-lg font-bold mb-2 tracking-wider">NXT in Gaming 2026</h3>
+              <h3 className="font-heading text-lg font-bold mb-2 tracking-wider">ZEF Champions League 2026</h3>
               <p className="text-[#6b6b80] text-xs tracking-wider leading-relaxed">
-                India&apos;s Premier Esports & Gaming Exhibition
+                India&apos;s Premier Esports Championship
               </p>
             </div>
             <div className="absolute -inset-8 bg-gradient-radial from-[#A020F0]/8 to-transparent rounded-full blur-2xl -z-10" />

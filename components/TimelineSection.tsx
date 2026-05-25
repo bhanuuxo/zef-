@@ -4,6 +4,7 @@ import { useRef, useEffect, useCallback } from "react";
 import { motion, useInView } from "framer-motion";
 
 const timelineEvents = [
+  { date: "July 19, 2026", title: "ZEF Champions League 2026", description: "India's premier esports championship across the nation.", color: "#A020F0", highlight: true },
   { date: "April–May 2026", title: "NSL 2026", description: "National-scale league spanning major Indian cities.", color: "#FF00FF", highlight: true },
   { date: "Feb–March 2026", title: "NXT in Gaming", description: "India's premier esports exhibition at Bharat Mandapam.", color: "#A020F0", highlight: true },
   { date: "December 2025", title: "Winter Wars 2", description: "Second edition solidifying the Winter Wars IP.", color: "#FF00FF" },

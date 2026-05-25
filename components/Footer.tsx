@@ -18,7 +18,7 @@ const socialLinks = [
 const footerLinks = [
   { title: "Explore", links: [{ name: "Home", href: "/" }, { name: "About Us", href: "/about" }, { name: "Our IPs", href: "/ips" }, { name: "Timeline", href: "#timeline" }, { name: "Media Gallery", href: "/gallery" }] },
   { title: "IP", links: [{ name: "NXT in Gaming 2026", href: "#nxt" }, { name: "NSL 2026", href: "/nsl2026" }, { name: "GSL 2026", href: "/ips" }, { name: "Champions League", href: "#timeline" }, { name: "Winter Wars", href: "#timeline" }] },
-  { title: "Connect", links: [{ name: "Careers", href: "/careers" }, { name: "Partner With Us", href: "#partners" }, { name: "Invest", href: "#invest" }, { name: "Investment Inquiries", href: "mailto:partnerships@zefglobal.com" }, { name: "Sponsor Inquiry", href: "mailto:partnerships@zefglobal.com" }] },
+  { title: "Connect", links: [{ name: "Careers", href: "/careers" }, { name: "Partner With Us", href: "#partners" }, { name: "Invest", href: "#invest" }, { name: "Investment Inquiries", href: "mailto:aniketsingh@zefglobal.com" }, { name: "Sponsor Inquiry", href: "mailto:aniketsingh@zefglobal.com" }] },
 ];
 
 const tickerLogos = [
@@ -102,7 +102,7 @@ export default function Footer() {
                 <h3 className="font-heading text-sm font-bold mb-3 text-white/85">Contact Information</h3>
                 <div className="space-y-3">
                   {[
-                    { icon: Mail, label: "EMAIL", value: "info@zefglobal.com", accent: "#A020F0" },
+                    { icon: Mail, label: "EMAIL", value: "aniketsingh@zefglobal.com", accent: "#A020F0" },
                     { icon: Phone, label: "CONTACT", value: "+91 7899589100", accent: "#FF00FF" },
                     { icon: MapPin, label: "LOCATION", value: "New Delhi, India", accent: "#B44AFF" },
                   ].map((item) => (
@@ -120,11 +120,11 @@ export default function Footer() {
               </div>
 
               <div className="grid grid-cols-2 gap-2">
-                <a href="mailto:partnerships@zefglobal.com" className="glass-card rounded-sm p-4 text-center hover:border-[#A020F0]/30 transition-all group">
+                <a href="mailto:aniketsingh@zefglobal.com" className="glass-card rounded-sm p-4 text-center hover:border-[#A020F0]/30 transition-all group">
                   <Gamepad2 className="w-5 h-5 mx-auto mb-1.5 text-[#A020F0] group-hover:text-[#B44AFF]" />
                   <span className="text-[10px] font-heading font-bold tracking-[0.1em] text-[#8a8a9a]">Sponsor Inquiry</span>
                 </a>
-                <a href="mailto:partnerships@zefglobal.com" className="glass-card rounded-sm p-4 text-center hover:border-[#FF00FF]/30 transition-all group">
+                <a href="mailto:aniketsingh@zefglobal.com" className="glass-card rounded-sm p-4 text-center hover:border-[#FF00FF]/30 transition-all group">
                   <Globe className="w-5 h-5 mx-auto mb-1.5 text-[#FF00FF] group-hover:text-[#FF2D95]" />
                   <span className="text-[10px] font-heading font-bold tracking-[0.1em] text-[#8a8a9a]">Investment Inquiry</span>
                 </a>

@@ -8,6 +8,16 @@ import Link from "next/link";
 const ips = [
   {
     id: 1,
+    title: "ZEF Champions League 2026",
+    subtitle: "India's Premier Esports Championship",
+    date: "19th July 2026",
+    location: "India",
+    description: "India's premier esports championship bringing together elite teams and players from across the nation for competitive glory.",
+    accent: "#A020F0",
+    link: "#nxt",
+  },
+  {
+    id: 2,
     title: "NXT in Gaming 2026",
     subtitle: "India's Premier Esports Exhibition",
     date: "12th March 2026",
@@ -17,7 +27,7 @@ const ips = [
     link: "#nxt",
   },
   {
-    id: 2,
+    id: 3,
     title: "NSL 2026",
     subtitle: "National Series League",
     date: "April – May 2026",
@@ -27,7 +37,7 @@ const ips = [
     link: "/nsl2026",
   },
   {
-    id: 3,
+    id: 4,
     title: "GSL 2026",
     subtitle: "Global Series League",
     date: "November 2026",

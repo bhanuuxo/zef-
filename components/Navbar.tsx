@@ -93,7 +93,7 @@ export default function Navbar() {
           </div>
 
           {/* Single CTA */}
-          <a href="#contact" className="hidden md:inline-flex items-center px-5 py-2 text-[11px] font-heading font-semibold tracking-[0.1em] uppercase text-white bg-[#A020F0] rounded-[3px] hover:bg-[#8b18d4] transition-colors duration-200">
+          <a href="mailto:aniketsingh@zefglobal.com" className="hidden md:inline-flex items-center px-5 py-2 text-[11px] font-heading font-semibold tracking-[0.1em] uppercase text-white bg-[#A020F0] rounded-[3px] hover:bg-[#8b18d4] transition-colors duration-200">
             Contact
           </a>
         </div>

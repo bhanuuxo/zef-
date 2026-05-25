@@ -65,7 +65,7 @@ export default function InvestorSection() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <a href="mailto:invest@zarxesports.com" className="btn-primary inline-flex items-center gap-3 text-sm px-8 py-3">
+              <a href="mailto:aniketsingh@zefglobal.com" className="btn-primary inline-flex items-center gap-3 text-sm px-8 py-3">
                 <span>Request Investor Deck</span>
                 <ArrowRight className="w-4 h-4" />
               </a>

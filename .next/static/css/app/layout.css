@@ -821,6 +821,9 @@ video {
 .inline-block{
   display: inline-block;
 }
+.inline{
+  display: inline;
+}
 .flex{
   display: flex;
 }
@@ -893,9 +896,6 @@ video {
 .h-40{
   height: 10rem;
 }
-.h-44{
-  height: 11rem;
-}
 .h-48{
   height: 12rem;
 }
@@ -935,8 +935,20 @@ video {
 .h-full{
   height: 100%;
 }
+.h-64{
+  height: 16rem;
+}
+.h-auto{
+  height: auto;
+}
 .max-h-\[500px\]{
   max-height: 500px;
+}
+.max-h-\[60vh\]{
+  max-height: 60vh;
+}
+.max-h-\[90vh\]{
+  max-height: 90vh;
 }
 .min-h-\[60vh\]{
   min-height: 60vh;
@@ -988,9 +1000,6 @@ video {
 }
 .w-40{
   width: 10rem;
-}
-.w-44{
-  width: 11rem;
 }
 .w-48{
   width: 12rem;
@@ -1098,6 +1107,15 @@ video {
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+@keyframes spin{
+
+  to{
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow{
+  animation: spin 25s linear infinite;
+}
 @keyframes ticker{
 
   0%{
@@ -1110,15 +1128,6 @@ video {
 }
 .animate-ticker-fast{
   animation: ticker 10s linear infinite;
-}
-@keyframes spin{
-
-  to{
-    transform: rotate(360deg);
-  }
-}
-.animate-spin-slow{
-  animation: spin 25s linear infinite;
 }
 .cursor-default{
   cursor: default;
@@ -1136,6 +1145,9 @@ video {
 }
 .list-disc{
   list-style-type: disc;
+}
+.auto-rows-max{
+  grid-auto-rows: max-content;
 }
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -1242,6 +1254,9 @@ video {
 .overflow-x-auto{
   overflow-x: auto;
 }
+.overflow-y-auto{
+  overflow-y: auto;
+}
 .overflow-x-hidden{
   overflow-x: hidden;
 }
@@ -1315,6 +1330,9 @@ video {
 }
 .border-white\/\[0\.08\]{
   border-color: rgb(255 255 255 / 0.08);
+}
+.border-white\/\[0\.1\]{
+  border-color: rgb(255 255 255 / 0.1);
 }
 .bg-\[\#050508\]{
   --tw-bg-opacity: 1;
@@ -1395,6 +1413,9 @@ video {
 .bg-white\/\[0\.04\]{
   background-color: rgb(255 255 255 / 0.04);
 }
+.bg-black\/40{
+  background-color: rgb(0 0 0 / 0.4);
+}
 .bg-gradient-radial{
   background-image: radial-gradient(var(--tw-gradient-stops));
 }
@@ -1417,6 +1438,11 @@ video {
 }
 .from-\[\#0a0818\]\/30{
   --tw-gradient-from: rgb(10 8 24 / 0.3) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(10 8 24 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.from-\[\#0a0818\]\/40{
+  --tw-gradient-from: rgb(10 8 24 / 0.4) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(10 8 24 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
@@ -1476,6 +1502,9 @@ video {
 .object-top{
   -o-object-position: top;
      object-position: top;
+}
+.p-0\.5{
+  padding: 0.125rem;
 }
 .p-2{
   padding: 0.5rem;
@@ -1556,10 +1585,6 @@ video {
 .py-12{
   padding-top: 3rem;
   padding-bottom: 3rem;
-}
-.py-14{
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
 }
 .py-16{
   padding-top: 4rem;
@@ -1662,10 +1687,10 @@ video {
   text-align: right;
 }
 .font-body{
-  font-family: Rajdhani, sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
 }
 .font-heading{
-  font-family: Orbitron, monospace;
+  font-family: 'Space Grotesk', sans-serif;
 }
 .text-2xl{
   font-size: 1.5rem;
@@ -1857,6 +1882,13 @@ video {
 }
 .text-white\/\[0\.015\]{
   color: rgb(255 255 255 / 0.015);
+}
+.text-\[\#A020F0\]\/50{
+  color: rgb(160 32 240 / 0.5);
+}
+.text-\[\#a0a0b8\]{
+  --tw-text-opacity: 1;
+  color: rgb(160 160 184 / var(--tw-text-opacity, 1));
 }
 .antialiased{
   -webkit-font-smoothing: antialiased;
@@ -2479,6 +2511,11 @@ select.form-input option { background: var(--surface); color: #e0e0e0; }
   color: rgb(160 32 240 / 0.8);
 }
 
+.hover\:text-\[\#B44AFF\]:hover{
+  --tw-text-opacity: 1;
+  color: rgb(180 74 255 / var(--tw-text-opacity, 1));
+}
+
 .hover\:text-white:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
@@ -2690,14 +2727,6 @@ select.form-input option { background: var(--surface); color: #e0e0e0; }
     padding: 3rem;
   }
 
-  .md\:p-6{
-    padding: 1.5rem;
-  }
-
-  .md\:p-7{
-    padding: 1.75rem;
-  }
-
   .md\:p-4{
     padding: 1rem;
   }
@@ -2714,6 +2743,11 @@ select.form-input option { background: var(--surface); color: #e0e0e0; }
   .md\:py-10{
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .md\:py-12{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .md\:py-20{
@@ -2739,11 +2773,6 @@ select.form-input option { background: var(--surface); color: #e0e0e0; }
   .md\:py-5{
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
-  }
-
-  .md\:py-12{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
   }
 
   .md\:text-left{
